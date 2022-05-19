@@ -1,5 +1,11 @@
-# CELLOR
-setwd("/Users/songdong/Dropbox/Dropbox/DLBCL/WatchDHL/sequencing_design/")
+# WatchDHL
+library(rstudioapi)
+
+# Getting the path of your current open file
+current_path = rstudioapi::getActiveDocumentContext()$path 
+setwd(dirname(current_path ))
+print( getwd() )
+
 library(ggplot2)
 library(gridExtra)
 library(grid)
