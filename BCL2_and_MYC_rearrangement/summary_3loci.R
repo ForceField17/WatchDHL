@@ -32,7 +32,7 @@ Anno3 <- Anno[which(Anno$chr == "chr14"),]
 SVbp <- read.table("breakpoint_position.txt",sep = "\t",header = T)
 SVbp$color <- gg_color_hue(6)[3]
 SVbp$color[which(SVbp$Tumor == "DHL")] <- gg_color_hue(6)[1]
-#SVbp <- SVbp[which(SVbp$patient != "P3"),]
+SVbp <- SVbp[which(SVbp$patient != "P3"),]
 
 
 ##### BCL2 locus
@@ -138,6 +138,7 @@ FILL <- rep(NA,length(LABEL))
 FILL[which(LABEL == "IgH (C)")] <- "#8dd3c7"
 FILL[which(LABEL == "IgH (J)")] <- "#bc80bd"
 FILL[which(LABEL == "IgH (D)")] <- "#fdb462"
+FILL[which(LABEL == "IgH (V)")] <- "#80b1d3"
 features3$fill <- FILL 
 features3$color <- FILL 
 HEI <- rep(0,length(LABEL))

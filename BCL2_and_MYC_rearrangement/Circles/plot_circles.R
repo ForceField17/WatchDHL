@@ -20,7 +20,7 @@ intra_genes = c("XXX")
 
 fusion_genes = c("XXX")
 
-hg38.genes = read.delim("hg38.annotation_all.bed", stringsAsFactors = F)
+hg38.genes = read.delim("hg38.genes.txt", stringsAsFactors = F)
 #hg38.genes = hg38.genes[hg38.genes$gene_type %in% c("protein_coding","lincRNA","intergenic"),]
 
 hg38g = makeGRangesFromDataFrame(df = hg38.genes,keep.extra.columns = T)
@@ -35,7 +35,8 @@ sv_color_mapper <-function(x){
 }
 
 sv = read.delim("BCL2_MYC.bedpe", stringsAsFactors = F)
-sv_raw = sv #note the translocations are counted twice
+sv = sv[which(sv$ID!="P3"),]
+sv_raw = sv 
 sv$theID = paste0(" the",sv$ID,":",sv$GENE_A,":",sv$GENE_B)
 sv = sv[!duplicated(sv$theID),]
 
@@ -66,7 +67,7 @@ sv_bed = rbind(sv_end[,c(1,2,3,7)],sv_start[,c(1,2,3,7)])
 sv_annot = annoteSVwithGene(tmp_sv_bed = sv_bed, hg38g = hg38g)
 sv_lab = sv_annot[,c(1:3,7)]
 
-pdf(file = paste0("./FigureS1A.pdf"),width=7,height=6, onefile = T)
+pdf(file = paste0("./chromosome_SV.pdf"),width=7,height=6, onefile = T)
 
 circos.clear()
 chromosome.index = paste0("chr", c(3,8,12,14,18,22))
@@ -92,29 +93,14 @@ highlight.chromosome(paste0("chr", c(22)),
 
 circos.genomicIdeogram(cytoband,track.height = 0.05)
 
-circos.genomicLink(sv_start, sv_end, col ="grey50", border =  sv_col, lwd = 1.6,h=0.6)
-
+#circos.genomicLink(sv_start, sv_end, col ="grey50", border =  sv_col, lwd = 1.6,h=0.6)
 circos.genomicLink(sv_start, sv_end, col ="grey50", border =  sv_col, lwd = 1.6,h=0.8)
-
-circos.genomicLink(sv_start, sv_end, col ="grey50", border =  sv_col, lwd = 1.6,h=1)
+#circos.genomicLink(sv_start, sv_end, col ="grey50", border =  sv_col, lwd = 1.6,h=1)
 
 dev.off() 
-
-
-
-    
 circos.clear()
 
  
-
-
-
-
-
-
-
-
-
 
 
 
@@ -123,32 +109,30 @@ circos.clear()
     
 pdf(file = paste0("./FigureS1B.pdf"),width=12,height=9, onefile = T)
     
-rad51bRDS <-  read.table("RAD51B.hg38.rds",header = T)
+rad51bRDS <-  read.table("SV.hg38.rds",header = T)
 head(rad51bRDS)
 circos.genomicInitialize(rad51bRDS, axis.labels.cex = 1,labels.cex = 1.5)
-circos.track(ylim = c(0, 1),  bg.col = c("#FF000040", "#00FF0040", "#0000FF40","#80b1d3","#bc80bd","#ff7f00","#d9d9d9"),    bg.border = NA, track.height = 0.05)
-
-circos.genomicLink(sv2_start, sv2_end, col = sv_col, border =  sv_col, lwd = 1.2,h=0.7)
-n = max(tapply(rad51bRDS$transcript, rad51bRDS$gene, function(x) length(unique(x))))
-circos.genomicTrack(rad51bRDS, ylim = c(0.5, n + 0.5), 
-                    panel.fun = function(region, value, ...) {
-                      all_tx = unique(value$transcript)
-                      for(i in seq_along(all_tx)) {
-                        l = value$transcript == all_tx[i]
-                        # for each transcript
-                        current_tx_start = min(region[l, 1])
-                        current_tx_end = max(region[l, 2])
-                        circos.lines(c(current_tx_start, current_tx_end),  c(n - i + 1, n - i + 1), col = "grey40",lwd = 2)
-                        circos.genomicRect(region[l, , drop = FALSE], ytop = n - i + 1 + 0.4, 
-                                           ybottom = n - i + 1 - 0.4, col = "#254880", border = NA)
-                      }
-                    }, bg.border = NA, track.height = 0.2)
-
-my_col <- c("#66c2a5","#8da0cb","#8da0cb","#e78ac3")
+circos.track(ylim = c(0, 1),  bg.col = c("#FF000040", "#00FF0040", "#00FF0040", "#0000FF40","#bc80bd","#ff7f00","#80b1d3"),    bg.border = NA, track.height = 0.05)
 sv2_start <- data.frame(sv_start$GENE_A,sv_start$start,sv_start$end,sv_start$theID,sv_start$TYPE)
 sv2_end <- data.frame(sv_end$GENE_B,sv_end$start,sv_end$end,sv_end$theID,sv_end$TYPE)
 colnames(sv2_start) = c("CHROM_A","START_A","END_A","ID","INFO")
 colnames(sv2_end) = c("CHROM_B","START_B","END_B","ID","INFO")
+circos.genomicLink(sv2_start, sv2_end, col = sv_col, border =  sv_col, lwd = 1.2,h=0.2)
+circos.genomicLink(sv2_start, sv2_end, col = sv_col, border =  sv_col, lwd = 1.2,h=0.4)
+circos.genomicLink(sv2_start, sv2_end, col = sv_col, border =  sv_col, lwd = 1.2,h=0.6)
+circos.genomicLink(sv2_start, sv2_end, col = sv_col, border =  sv_col, lwd = 1.2,h=0.9)
+n = max(tapply(rad51bRDS$transcript, rad51bRDS$gene, function(x) length(unique(x))))
+circos.genomicTrack(rad51bRDS, ylim = c(0.5, n + 0.5), panel.fun = function(region, value, ...) {
+    all_tx = unique(value$transcript)
+    for(i in seq_along(all_tx)) {
+           l = value$transcript == all_tx[i]
+           current_tx_start = min(region[l, 1])
+           current_tx_end = max(region[l, 2])
+           circos.lines(c(current_tx_start, current_tx_end),  c(n - i + 1, n - i + 1), col = "grey40",lwd = 2)
+           circos.genomicRect(region[l, , drop = FALSE], ytop = n - i + 1 + 0.4, 
+                              ybottom = n - i + 1 - 0.4, col = "#254880", border = NA)
+    }
+}, bg.border = NA, track.height = 0.2)
 
 circos.clear()
 

@@ -52,6 +52,6 @@ histology.plot<-histology.plot + scale_color_manual(name="Grade",values=c(a_FL=g
 histology.plot<-histology.plot + scale_x_continuous(expand=c(0,0),limits = c(-0.3,14),breaks = seq(0,14,2))
 
 figure_1<-rbind(ggplotGrob(histology.plot),size="first")
-ggsave(file="Figure1A.pdf", plot=figure_1,bg = 'white', width = 18, height = 12, units = 'cm', dpi = 600)
+ggsave(file="Figure1A.pdf", plot=figure_1,bg = 'white', width = 16, height = 10, units = 'cm', dpi = 600)
 
 
