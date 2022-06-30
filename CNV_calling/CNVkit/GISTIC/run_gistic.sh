@@ -1,0 +1,1 @@
+gp_gistic2_from_seg -b Gistic_DHL10 -seg DHL_10samples.seg -refgene ~/IGCT/analysis/CNV/GISTIC/refgenefiles/hg38.UCSC.add_miR.160920.refgene.mat -rx 1 -conf 0.99 -genegistic 1 -savegene 1 -savedata 0 -saveseg 0 -ta 0.4 -td 0.4 -qvt 0.01

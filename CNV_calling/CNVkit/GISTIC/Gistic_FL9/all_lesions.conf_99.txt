@@ -1,0 +1,3 @@
+Unique Name	Descriptor	Wide Peak Limits	Peak Limits	Region Limits	q values	Residual q values after removing segments shared with higher peaks	Broad or Focal	Amplitude Threshold	P2_LG	P6_LG	P7_LG	P8_LG	P1_LG	P4_LG	P5_LG	P9_LG	
+Deletion Peak 1	14q32.33	chr14:105665634-107043718(probes 217047:217206)	chr14:105844451-105859775(probes 217082:217083)	chr14:105745334-105902252(probes 217059:217101)	5.7843e-05	 5.7843e-05		0: t>-0.4; 1: -0.4>t> -1.3; 2: t< -1.3	1	1	0	0	1	1	1	1	
+Deletion Peak 1 - CN values	14q32.33	chr14:105665634-107043718(probes 217047:217206)	chr14:105844451-105859775(probes 217082:217083)	chr14:105745334-105902252(probes 217059:217101)	5.7843e-05	 5.7843e-05		Actual Copy Change Given	-0.40751	-1.2929	0.156	-0.029145	-0.7198	-1.2929	-0.99053	-0.63052	

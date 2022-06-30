@@ -1,0 +1,15 @@
+cytoband	14q32.33	
+q value	5.7843e-05	
+residual q value	5.7843e-05	
+wide peak boundaries	chr14:105665634-107043718	
+genes in wide peak	ELK2AP	
+	ADAM6	
+	FAM30A	
+	LINC00226	
+	LINC00221	
+	MIR4507	
+	MIR4538	
+	MIR4539	
+	MIR4537	
+	MIR5195	
+	MIR7641-2	

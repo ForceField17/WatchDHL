@@ -1,0 +1,9 @@
+sample	segment_count	included
+P2_HG	875	yes
+P6_HG	1061	yes
+P7_HG	336	yes
+P8_HG	503	yes
+P1_HG	832	yes
+P4_HG	148	yes
+P5_HG	903	yes
+P9_HG	202	yes

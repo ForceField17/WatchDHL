@@ -1,0 +1,5 @@
+cytoband
+q value
+residual q value
+wide peak boundaries
+genes in wide peak
