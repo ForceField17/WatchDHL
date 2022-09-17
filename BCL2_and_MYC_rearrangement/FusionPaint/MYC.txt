@@ -1,0 +1,4 @@
+sample	geneA	chrA	posA	ortA	featureA	geneB	chrB	posB	ortB	featureB	readsA	readsB	matchA	matchB	repeatA	repeatB	ratioA	ratioB	score	rating	functional effect	frame	sv_refseqA	sv_refseqB
+P6	IGH	chr14	105603386	+	intron	MYC	chr8	127736757	+	intron	6	6	132	140	0	0	0.5	0.5	30	HQ	other	,,	,,	NM_002467
+P2	IGH	chr14	105591340	+	intron	MYC	chr8	127736514	+	intron	6	6	132	140	0	0	0.5	0.5	30	HQ	other	,,	,,	NM_002467
+P1	IGH	chr14	105603086	+	intron	MYC	chr8	127737152	+	intron	6	6	132	140	0	0	0.5	0.5	30	HQ	other	,,	,,	NM_002467

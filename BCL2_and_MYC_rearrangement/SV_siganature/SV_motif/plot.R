@@ -22,6 +22,7 @@ gg_color_hue <- function(n) {
 table <- read.table('bp_motif.txt',header=T)
 
 tableA <- table[which(table$Locus == "BCL2" | table$Target == "BCL2"),]
+tableA <- tableA[which(tableA$patient != "P3"),]
 
 NAN_plot <- ggplot() + theme_classic() 
 NAN_plot <- NAN_plot + geom_violin(data=tableA,aes(x=Locus,y=as.numeric(Min_CpG),fill=Locus),width=1.1,alpha=0.3,size=0.4) +
@@ -29,7 +30,7 @@ NAN_plot <- NAN_plot + geom_violin(data=tableA,aes(x=Locus,y=as.numeric(Min_CpG)
   #geom_jitter(data=tableA,aes(x=Locus,y=as.numeric(Min_CpG),color=SVgene),width = 0.16,cex=2,alpha=1)#+
   #geom_dotplot(data=tableA,aes(x=Locus,y=as.numeric(Min_CpG),fill=Tumor),color="grey40",shape=20,binaxis='y',binwidth=1, stackdir='center', dotsize=0.6)
    geom_path(data=tableA,aes(x=Locus,y=Min_CpG,group=patient ),color="grey60",size=0.3) +
-  geom_point(aes(x=Locus,y=as.numeric(Min_CpG),color=Tumor),alpha=.6,shape=20,data=tableA,size=3) 
+  geom_point(aes(x=Locus,y=as.numeric(Min_CpG),color=Tumor),alpha=.9,shape=20,data=tableA,size=3) 
  #geom_text(aes(x=Fusion,y=as.numeric(fraction),label=Case),data=tableA2,size=3) 
 NAN_plot <-NAN_plot + theme(panel.background=element_rect(fill='transparent',color='transparent'),plot.margin=unit(c(2,2,2,3),'lines'),
                            plot.title=element_text(size=34,vjust=0.5,hjust=0.5,face='bold.italic',color='transparent'),text=element_text(size=14,face='bold'),
@@ -122,12 +123,13 @@ ggsave(file="CpG_MYC_2.pdf", plot=figure_2,bg = 'white', width =10, height = 12,
 
 tableD <- table[which(table$Locus != "BCL2" & table$Target != "BCL2"),]
 tableD <- tableD[which(tableD$Locus == "IgH" | tableD$Target == "IgH"),]
+tableD <- tableD[which(tableD$patient != "P3"),]
 
 NAN_plot <- ggplot() + theme_classic() 
 NAN_plot <- NAN_plot + geom_violin(data=tableD,aes(x=Locus,y=as.numeric(Min_CpG),fill=Locus),width=1.1,alpha=0.3,size=0.4) +
   geom_boxplot(data=tableD,aes(x=Locus,y=as.numeric(Min_CpG)),width=0.06,alpha=0.5,size=0.5)+
   geom_path(data=tableD,aes(x=Locus,y=Min_CpG,group=patient ),color="grey60",size=0.3) +
-  geom_point(aes(x=Locus,y=as.numeric(Min_CpG),color=Tumor),alpha=.6,shape=20,data=tableD,size=3) 
+  geom_point(aes(x=Locus,y=as.numeric(Min_CpG),color=Tumor),alpha=.9,shape=20,data=tableD,size=3) 
 NAN_plot <-NAN_plot + theme(panel.background=element_rect(fill='transparent',color='transparent'),plot.margin=unit(c(2,2,2,3),'lines'),
                             plot.title=element_text(size=34,vjust=0.5,hjust=0.5,face='bold.italic',color='transparent'),text=element_text(size=14,face='bold'),
                             legend.key.width=unit(0.6,'cm'),legend.key.height=unit(0.6,'cm'),legend.position='none',legend.text=element_text(size=14,hjust=0,face='bold'),
@@ -137,7 +139,7 @@ NAN_plot <- NAN_plot + scale_y_continuous(expand=c(0,0),limits=c(-0.5,17),breaks
 #NAN_plot <- NAN_plot + scale_x_discrete(labels=c(B.FL="FL \ntumor",C.DHL="DHL \ntumor"))#
 NAN_plot<- NAN_plot +ylab("Distance from nearest CpG to breakpoint") +xlab(NULL)
 NAN_plot <- NAN_plot + scale_fill_manual(name=NULL,values = c("#bc80bd","#00FF0040"))
-NAN_plot <- NAN_plot + scale_color_manual(name=NULL,values = c(gg_color_hue(6)[3],gg_color_hue(6)[1]))
+NAN_plot <- NAN_plot + scale_color_manual(name=NULL,values = c(gg_color_hue(6)[1],gg_color_hue(6)[1]))
 the<-compare_means(Min_CpG ~ Locus,  data = tableD,paired = T )
 #NAN_plot<- NAN_plot +stat_compare_means(comparisons = my_comparisons)
 NAN_plot <- NAN_plot +stat_pvalue_manual(

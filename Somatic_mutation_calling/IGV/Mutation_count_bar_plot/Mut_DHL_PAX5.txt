@@ -1,0 +1,30 @@
+P1	chr9	37024479	"circle"	"#66c2a5"	T->G	CCT(G)T	GAA(C)G	No
+P6	chr9	37024960	"circle"	"#66c2a5"	C->G	AGC(G)C	TGG(C)C	No
+P6	chr9	37025068	"circle"	"#66c2a5"	G->T	AGG(T)C	AGC(A)C	No
+P8	chr9	37025151	"triangle_point_up"	"#fc8d62"	Del 1bp	NA	NA	No
+P1	chr9	37025189	"circle"	"#66c2a5"	C->G	CGC(G)T	AAG(C)C	No
+P6	chr9	37025249	"circle"	"#66c2a5"	C->G	AGC(G)C	TGG(C)C	No
+P6	chr9	37025363	"circle"	"#66c2a5"	G->A	CTG(A)C	AGC(T)A	No
+P2	chr9	37025364	"circle"	"#66c2a5"	C->T	TGC(T)T	CAG(A)C	Yes
+P1	chr9	37025559	"circle"	"#66c2a5"	G->A	TGG(A)C	AGC(T)C	Yes
+P7	chr9	37025567	"circle"	"#66c2a5"	G->A	CAG(A)C	TGC(T)T	Yes
+P9	chr9	37025578	"circle"	"#66c2a5"	G->C	AAG(C)G	TCC(G)T	No
+P2	chr9	37025801	"circle"	"#66c2a5"	G->A	TGG(A)T	TAC(T)C	Yes
+P1	chr9	37025820	"triangle_point_up"	"#fc8d62"	Del 56bp	NA	NA	No
+P6	chr9	37025953	"circle"	"#66c2a5"	G->A	AAG(A)C	AGC(T)T	Yes
+P6	chr9	37026028	"circle"	"#66c2a5"	G->A	TAG(A)C	GGC(T)T	No
+P2	chr9	37026047	"circle"	"#66c2a5"	G->A	TAG(A)C	AGC(T)T	Yes
+P6	chr9	37026047	"circle"	"#66c2a5"	G->C	TAG(C)C	AGC(G)T	No
+P7	chr9	37026082	"circle"	"#66c2a5"	G->A	GGG(A)T	GAC(T)C	No
+P6	chr9	37026215	"circle"	"#66c2a5"	C->A	AAC(A)T	CAG(T)T	No
+P6	chr9	37026315	"circle"	"#66c2a5"	G->C	AAG(C)C	AGC(G)T	No
+P9	chr9	37026315	"circle"	"#66c2a5"	G->A	AAG(A)C	AGC(T)T	Yes
+P1	chr9	37026316	"circle"	"#66c2a5"	C->G	AGC(G)T	TAG(C)C	No
+P2	chr9	37026316	"circle"	"#66c2a5"	C->T	AGC(T)T	TAG(A)C	Yes
+P1	chr9	37026421	"circle"	"#66c2a5"	C->T	TGC(T)G	GCG(A)C	No
+P1	chr9	37026585	"triangle_point_up"	"#fc8d62"	Del 13bp	NA	NA	No
+P6	chr9	37026676	"triangle_point_up"	"#fc8d62"	Del 2bp	NA	NA	No
+P2	chr9	37026706	"circle"	"#66c2a5"	C->T	AGC(T)T	AAG(A)C	Yes
+P1	chr9	37026734	"circle"	"#66c2a5"	C->T	TGC(T)T	CAG(A)C	Yes
+P2	chr9	37026889	"circle"	"#66c2a5"	G->A	CGG(A)C	AGC(T)C	Yes
+P2	chr9	37027276	"circle"	"#66c2a5"	C->T	AGC(T)G	ACG(A)C	No

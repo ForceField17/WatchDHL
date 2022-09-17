@@ -6,4 +6,5 @@ P8_LG	528	yes
 P1_LG	92	yes
 P4_LG	129	yes
 P5_LG	849	yes
-P9_LG	1419	yes
+P9_LG	1425	yes
+P8_2_LG	1850	yes

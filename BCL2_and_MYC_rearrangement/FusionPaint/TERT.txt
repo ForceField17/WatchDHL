@@ -1,0 +1,3 @@
+sample	geneA	chrA	posA	ortA	featureA	geneB	chrB	posB	ortB	featureB	readsA	readsB	matchA	matchB	repeatA	repeatB	ratioA	ratioB	score	rating	functional effect	frame	sv_refseqA	sv_refseqB
+SJHGG030920	USP9X	chrX	41086109	+	5utr	ERAS	chrX	48829081	+	5utr	6	6	132	140	0	0	0.5	0.5	30	HQ	other	,,	NM_001039590	NM_181532
+C3L-01155	PDZD2	chr5	32070122	+	coding	TERT	chr5	1295533	-	5utr	7	2	122	121	0	0	0.5	0.5	30	HQ	other	,,	NM_178140	NM_198253
