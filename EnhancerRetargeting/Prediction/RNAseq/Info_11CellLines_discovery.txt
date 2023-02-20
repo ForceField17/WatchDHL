@@ -1,0 +1,12 @@
+case	Histology	Class	Disease	DNA	Gender	tissue	BCL2	MYC	Type	ZCCHC7
+DB	GCB	Metastasis	DLBCL	WGS	male	CellLine	IgH	BCL6	DHL	WT
+DOHH2	GCB	Metastasis	DLBCL	WGS	male	CellLine	IgH	IgH	DHL	WT
+Karpas422	GCB	Metastasis	DLBCL	WGS	female	CellLine	IgH	WT	nonDHL	WT
+NUDHL1	GCB	Metastasis	DLBCL	WGS	male	CellLine	IgH	BCL6	DHL	Gain
+NUDUL1	ABC	Metastasis	DLBCL	WGS	male	CellLine	WT	IgH	nonDHL	WT
+OCILY19	GCB	Primary	DLBCL	WGS	female	CellLine	IgH	Intergenic	DHL	WT
+OCILY1	GCB	Metastasis	DLBCL	WGS	male	CellLine	IgH	Intergenic	DHL	WT
+OCILY3	ABC	Primary	DLBCL	WGS	male	CellLine	WT	WT	nonDHL	WT
+OCILY7	GCB	Primary	DLBCL	WGS	male	CellLine	WT	IgH	nonDHL	WT
+SUDHL6	GCB	Metastasis	DLBCL	WGS	male	CellLine	IgH	ZCCHC7	DHL	Gain
+WSUDLCL2	GCB	Metastasis	DLBCL	WGS	male	CellLine	IgH	BCL6	DHL	WT

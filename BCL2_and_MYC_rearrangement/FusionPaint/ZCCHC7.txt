@@ -1,3 +1,0 @@
-sample	geneA	chrA	posA	ortA	featureA	geneB	chrB	posB	ortB	featureB	readsA	readsB	matchA	matchB	repeatA	repeatB	ratioA	ratioB	score	rating	functional effect	frame	sv_refseqA	sv_refseqB
-DHL11	MYC	chr8	127786931	+	3utr	ZCCHC7	chr9	37469545	-	3utr	6	6	132	140	0	0	0.5	0.5	30	HQ	other	,,	NM_002467	NM_032226
-SUDHL6	PVT1	chr8	127817486	+	coding	ZCCHC7	chr9	37219249	+	coding	7	2	122	121	0	0	0.5	0.5	30	HQ	other	,,	NR_003367	NM_032226

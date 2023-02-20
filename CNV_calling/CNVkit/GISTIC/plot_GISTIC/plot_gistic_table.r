@@ -24,7 +24,7 @@ ffff_plot<-ggplot()+theme_classic()
 ffff_plot<-ffff_plot+geom_line(data=amp ,aes(x=-Position_offset,y=X.log10.q.value.),size=1 ,color = "#b2182b")+
   scale_y_continuous(expression(paste("-log" ["10"], italic(" q-value"))),expand=c(0,0),limits = c(0, 8),breaks=seq(0,8,2))+
   scale_x_continuous(expand=c(0,0),breaks=-chr$X.log10.q.value.[c(1 ,  3  ,  5  , 7  ,  9 , 11 , 13 , 15 , 17 , 19 , 21 )],labels = c(1 ,  3  ,  5  , 7  ,  9 , 11 , 13 , 15 , 17 , 19 , 21 ))+
-  geom_vline( xintercept =c(0,-chr$Position_offset),size=0.3,lty=5,color="grey")+ geom_hline(yintercept=2, color="#1a9850", lty=2)
+  geom_vline( xintercept =c(-chr$Position_offset),size=0.3,lty=5,color="grey")+ geom_hline(yintercept=2, color="#1a9850", lty=2)
 
 #ffff_plot<-ffff_plot+geom_text(data=data_plot,aes(x=reorder(se,-orderID),y=Npat,label=Npat),color='black',stat='identity',size=3.6,hjust = 1, nudge_y = 0.2)
 #ffff_plot<-ffff_plot+geom_text(data=data_plot,aes(x=reorder(se,-orderID),y=0.5,label=Pat),color='black',stat='identity',size=3,hjust = 0, nudge_y = 0)
@@ -42,7 +42,7 @@ dddd_plot<-ggplot()+theme_classic()
 dddd_plot<-dddd_plot+geom_line(data=del ,aes(x=-Position_offset,y=X.log10.q.value.),size=1 ,color = "#2166ac")+
   scale_y_continuous(expression(paste("-log" ["10"], italic(" q-value"))),expand=c(0,0),limits = c(8, 0),breaks=seq(0,8,2),trans = 'reverse')+
   scale_x_continuous(expand=c(0,0),breaks=-chr$X.log10.q.value.[c( 2 , 4 ,  6 ,  8  ,10 , 12,14 , 16, 18 , 20 , 22)],labels = c( 2 , 4 ,  6 ,  8  ,10 , 12,14 , 16, 18 , 20 , 22),position = "top")+
-  geom_vline( xintercept =c(0,-chr$Position_offset),size=0.3,lty=5,color="grey")+ geom_hline(yintercept=2, color="#1a9850", lty=2)
+  geom_vline( xintercept =c(-chr$Position_offset),size=0.3,lty=5,color="grey")+ geom_hline(yintercept=2, color="#1a9850", lty=2)
 
 #ffff_plot<-ffff_plot+geom_text(data=data_plot,aes(x=reorder(se,-orderID),y=Npat,label=Npat),color='black',stat='identity',size=3.6,hjust = 1, nudge_y = 0.2)
 #ffff_plot<-ffff_plot+geom_text(data=data_plot,aes(x=reorder(se,-orderID),y=0.5,label=Pat),color='black',stat='identity',size=3,hjust = 0, nudge_y = 0)
@@ -77,7 +77,7 @@ ffff_plot<-ggplot()+theme_classic()
 ffff_plot<-ffff_plot+geom_line(data=amp ,aes(x=-Position_offset,y=X.log10.q.value.),size=1 ,color = "#b2182b")+
   scale_y_continuous(expression(paste("-log" ["10"], italic(" q-value"))),expand=c(0,0),limits = c(0, 8),breaks=seq(0,8,2))+
   scale_x_continuous(expand=c(0,0),breaks=-chr$X.log10.q.value.[c(1 ,  3  ,  5  , 7  ,  9 , 11 , 13 , 15 , 17 , 19 , 21 )],labels = c(1 ,  3  ,  5  , 7  ,  9 , 11 , 13 , 15 , 17 , 19 , 21 ))+
-  geom_vline( xintercept =c(0,-chr$Position_offset),size=0.3,lty=5,color="grey")+ geom_hline(yintercept=2, color="#1a9850", lty=2)
+  geom_vline( xintercept =c(-chr$Position_offset),size=0.3,lty=5,color="grey")+ geom_hline(yintercept=2, color="#1a9850", lty=2)
 
 #ffff_plot<-ffff_plot+geom_text(data=data_plot,aes(x=reorder(se,-orderID),y=Npat,label=Npat),color='black',stat='identity',size=3.6,hjust = 1, nudge_y = 0.2)
 #ffff_plot<-ffff_plot+geom_text(data=data_plot,aes(x=reorder(se,-orderID),y=0.5,label=Pat),color='black',stat='identity',size=3,hjust = 0, nudge_y = 0)
@@ -95,7 +95,7 @@ dddd_plot<-ggplot()+theme_classic()
 dddd_plot<-dddd_plot+geom_line(data=del ,aes(x=-Position_offset,y=X.log10.q.value.),size=1 ,color = "#2166ac")+
   scale_y_continuous(expression(paste("-log" ["10"], italic(" q-value"))),expand=c(0,0),limits = c(8, 0),breaks=seq(0,8,2),trans = 'reverse')+
   scale_x_continuous(expand=c(0,0),breaks=-chr$X.log10.q.value.[c( 2 , 4 ,  6 ,  8  ,10 , 12,14 , 16, 18 , 20 , 22)],labels = c( 2 , 4 ,  6 ,  8  ,10 , 12,14 , 16, 18 , 20 , 22),position = "top")+
-  geom_vline( xintercept =c(0,-chr$Position_offset),size=0.3,lty=5,color="grey")+ geom_hline(yintercept=2, color="#1a9850", lty=2)
+  geom_vline( xintercept =c(-chr$Position_offset),size=0.3,lty=5,color="grey")+ geom_hline(yintercept=2, color="#1a9850", lty=2)
 
 #ffff_plot<-ffff_plot+geom_text(data=data_plot,aes(x=reorder(se,-orderID),y=Npat,label=Npat),color='black',stat='identity',size=3.6,hjust = 1, nudge_y = 0.2)
 #ffff_plot<-ffff_plot+geom_text(data=data_plot,aes(x=reorder(se,-orderID),y=0.5,label=Pat),color='black',stat='identity',size=3,hjust = 0, nudge_y = 0)

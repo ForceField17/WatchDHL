@@ -107,7 +107,7 @@ circos.clear()
 #FIGURE2 
 
     
-pdf(file = paste0("./FigureS1B.pdf"),width=12,height=9, onefile = T)
+pdf(file = paste0("./CircosPlot_for_All_BCL2_MYC_SV_.pdf"),width=12,height=9, onefile = T)
     
 rad51bRDS <-  read.table("SV.hg38.rds",header = T)
 head(rad51bRDS)

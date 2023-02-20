@@ -44,7 +44,7 @@ histology.plot<-ggplot() +
 
   theme_classic()+
   theme(panel.background=element_rect(fill='transparent',color='transparent'),plot.margin=unit(c(1,1,1,1),'lines'),plot.title=element_text(size=24,vjust=0.5,hjust=0.5,face='bold.italic'),
-        text=element_text(size=2,face='bold'),legend.key.width=unit(1,'cm'),legend.key.height=unit(0.8,'cm'),legend.position=c(0.78,0.88),legend.title=element_blank(),axis.ticks.y = element_blank(),
+        text=element_text(size=2,face='bold'),legend.key.width=unit(1,'cm'),legend.key.height=unit(0.8,'cm'),legend.position="none",legend.title=element_blank(),axis.ticks.y = element_blank(),
         legend.margin=margin(t=0.1,r=0.1,b=0,l=0.1,unit='cm'),legend.text=element_text(size=14,face='plain',color='black'),axis.text.y=element_text(size=14,face='bold',color='black'),axis.line.y = element_blank(),
         axis.text.x=element_text(size=16,face='bold',color='black'),axis.title.x=element_text(size=18,vjust=-1,face='plain',color='black'),axis.title.y=element_text(size=16,hjust=0.5,vjust=2,face='plain',color='black'))
 

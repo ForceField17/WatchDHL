@@ -1,8 +1,0 @@
-[bam_fillmd1] different NM for read 'GWNJ-0965:528:GW200105000:8:2222:1367:17465': 0 -> 2
-[bam_fillmd1] different MD for read 'GWNJ-0965:528:GW200105000:8:2222:1367:17465': '43' -> '41N0N0'
-[bam_fillmd1] different NM for read 'GWNJ-0965:528:GW200105000:8:2222:1367:17465': 0 -> 2
-[bam_fillmd1] different MD for read 'GWNJ-0965:528:GW200105000:8:2222:1367:17465': '43' -> '41N0N0'
-[bam_fillmd1] different MD for read 'GWNJ-0901:566:GW1912172731st:4:1104:10815:27081': '145T0' -> '145N0'
-[bam_fillmd1] different MD for read 'GWNJ-0901:566:GW1912172731st:4:1104:10815:27081': '145T0' -> '145N0'
-[bam_fillmd1] different MD for read 'GWNJ-0901:566:GW1912172731st:4:1104:10815:27081': '145T0' -> '145N0'
-[bam_fillmd1] different MD for read 'GWNJ-0901:566:GW1912172731st:4:1104:10815:27081': '145T0' -> '145N0'

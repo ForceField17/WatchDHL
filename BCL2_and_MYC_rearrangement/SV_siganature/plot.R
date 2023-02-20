@@ -48,7 +48,7 @@ NAN_plot <- NAN_plot +stat_pvalue_manual(
 
 figure_2<-rbind(ggplotGrob(NAN_plot),size="last")
 
-ggsave(file="breakEndInsertion.pdf", plot=figure_2,bg = 'white', width =11, height = 12, units = 'cm', dpi = 600)
+ggsave(file="ExtFig1e_breakEndInsertion.pdf", plot=figure_2,bg = 'white', width =11, height = 12, units = 'cm', dpi = 600)
 
 
 

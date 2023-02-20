@@ -19,7 +19,7 @@ gg_color_hue <- function(n) {
 }
 
 plot.table <- read.table('SV_read_count.txt',header=T)
-plot.table <- plot.table[which(plot.table$Case!="P3"),]
+plot.table <- plot.table[which(!(plot.table$Case %in% c("P3","DHL38","DHL42"))),]
 plot.table2 <-plot.table[which( plot.table$Tissue!="A.Normal" & plot.table$Tissue!="B.FL.a" & plot.table$Fusion=="MYC" ),] 
 plot.table2$ID <- paste0(plot.table2$Tissue," ",plot.table2$Fusion," fusion")
 
@@ -39,7 +39,7 @@ NAN_plot<- NAN_plot +ylab("Allele frequency of MYC structural variation") +xlab(
 NAN_plot <- NAN_plot + scale_fill_manual(name=NULL,values = c(B.FL=gg_color_hue(6)[3],C.DHL=gg_color_hue(6)[1]))
 NAN_plot <- NAN_plot + scale_color_manual(name=NULL,values = c(B.FL=gg_color_hue(6)[3],C.DHL=gg_color_hue(6)[1]))
 the<-compare_means(fraction ~ Tissue,  data = plot.table2,paired = T,method = "wilcox.test",alternative = "greater" )
-#NAN_plot<- NAN_plot +stat_compare_means(comparisons = my_comparisons)
+the
 NAN_plot <- NAN_plot +stat_pvalue_manual(
   the, label = NULL, 
   y.position = c( 0.95)
@@ -48,7 +48,7 @@ NAN_plot <- NAN_plot +stat_pvalue_manual(
 
 figure_2<-rbind(ggplotGrob(NAN_plot),size="last")
 
-ggsave(file="AF_MYC.pdf", plot=figure_2,bg = 'white', width =8, height = 12, units = 'cm', dpi = 600)
+ggsave(file="Fig1e_AF_MYC.pdf", plot=figure_2,bg = 'white', width =8, height = 12, units = 'cm', dpi = 600)
 
 
 ##########################################33
@@ -81,6 +81,6 @@ NAN_plot <- NAN_plot +stat_pvalue_manual(
 
 figure_2<-rbind(ggplotGrob(NAN_plot),size="last")
 
-ggsave(file="AF_BCL2.pdf", plot=figure_2,bg = 'white', width =8, height = 12, units = 'cm', dpi = 600)
+ggsave(file="Fig1d_AF_BCL2.pdf", plot=figure_2,bg = 'white', width =8, height = 12, units = 'cm', dpi = 600)
 
 

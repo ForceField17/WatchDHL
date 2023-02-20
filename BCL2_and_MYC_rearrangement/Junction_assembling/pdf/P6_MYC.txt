@@ -1,3 +1,0 @@
-#gene1	gene2	strand1(gene/fusion)	strand2(gene/fusion)	breakpoint1	breakpoint2	site1	site2	type	direction1	direction2	split_reads1	split_reads2	discordant_mates	coverage1	coverage2	confidence	closest_genomic_breakpoint1	closest_genomic_breakpoint2	filters	fusion_transcript	reading_frame	peptide_sequence	read_identifiers
-IGH	MYC	-/-	+/+	14:105603386	8:127736757	intron	upstream	translocation	downstream	upstream	13	13	NA	240	401	low	.	.	duplicates(8)	AAGAAGAGAAAAAGC|GGGAGCAAACAAATCA	inframe	DSSQHSNHRPS|AQAEVDRLLEILKEVENEKNDKDKKIAELErh	A00838:198:H3GCMDSXY:1:2626:29668:30013,A00838:198:H3GCMDSXY:1:1516:29225:21449
-

@@ -52,7 +52,7 @@ NAN_plot <- NAN_plot +stat_pvalue_manual(
 
 figure_2<-rbind(ggplotGrob(NAN_plot),size="last")
 
-ggsave(file="CpG_BCL2.pdf", plot=figure_2,bg = 'white', width =11, height = 12, units = 'cm', dpi = 600)
+ggsave(file="ExtFig1d_CpG_BCL2.pdf", plot=figure_2,bg = 'white', width =11, height = 12, units = 'cm', dpi = 600)
 
 
 
@@ -117,7 +117,7 @@ NAN_plot <- NAN_plot +stat_pvalue_manual(
 
 figure_2<-rbind(ggplotGrob(NAN_plot),size="last")
 
-ggsave(file="CpG_MYC_2.pdf", plot=figure_2,bg = 'white', width =10, height = 12, units = 'cm', dpi = 600)
+#ggsave(file="CpG_MYC_2.pdf", plot=figure_2,bg = 'white', width =10, height = 12, units = 'cm', dpi = 600)
 
 
 
@@ -150,5 +150,5 @@ NAN_plot <- NAN_plot +stat_pvalue_manual(
 
 figure_2<-rbind(ggplotGrob(NAN_plot),size="last")
 
-ggsave(file="CpG_IgH_MYC.pdf", plot=figure_2,bg = 'white', width =11, height = 12, units = 'cm', dpi = 600)
+ggsave(file="ExtFig1d_CpG_IgH_MYC.pdf", plot=figure_2,bg = 'white', width =11, height = 12, units = 'cm', dpi = 600)
 

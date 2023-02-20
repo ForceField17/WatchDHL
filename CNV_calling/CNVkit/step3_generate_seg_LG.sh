@@ -15,7 +15,7 @@ done
 
 
 
-for i in {P1,P3,P4,P5,P9};do
+for i in {P1,P4,P5,P9};do
         cnvkit.py fix Coverage/$i\_LG.targetcoverage.cnn Coverage/$i\_LG.antitargetcoverage.cnn Super_normal_reference.cnn --no-edge -o subtraction/$i\_LG.cnr
 
         head -n1 subtraction/$i\_LG.cnr > test_LG.cnr

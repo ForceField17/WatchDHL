@@ -1,2 +1,0 @@
-sample	geneA	chrA	posA	ortA	featureA	geneB	chrB	posB	ortB	featureB	readsA	readsB	matchA	matchB	repeatA	repeatB	ratioA	ratioB	score	rating	functional effect	frame	sv_refseqA	sv_refseqA_anchor_type	sv_refseqA_contig_index	sv_refseqB	sv_refseqB_anchor_type	sv_refseqB_contig_index
-P2	BCL2	chr18	63126264	-	3utr	IGH	chr14	105864257	-	coding	6	6	132	140	0	0	0.5	0.5	30	HQ	other	,,	NM_000633	tuple	1	,,	tuple	200

@@ -48,10 +48,10 @@ sample.gr$label <- NULL
 
 START <- Anno1$start
 END <- Anno1$end
-MIN <- min(START,POS,END) - 400000
+MIN <- min(START,POS,END) - 5000
 MAX <- max(START,POS,END) 
 VECT <- c(MIN,START,MAX)
-WIDTH <- c(0,END-START,400000)
+WIDTH <- c(0,END-START,5000)
 LABEL <- c("",Anno1$locus,"")
 PART <- c("",Anno1$part,"")
 
@@ -76,7 +76,7 @@ chr18$shape <- "diamond"
 
 ##### MYC locus
 Loci2 <- SVbp[which(SVbp$Locus == "MYC"),]
-Anno2 <- Anno[which(Anno$locus == "MYC"),]# | Anno$locus == "PVT1"),]
+Anno2 <- Anno[which(Anno$locus == "MYC" | Anno$locus == "PVT1"),]
 
 
 POS <- Loci2$position
@@ -324,15 +324,15 @@ chr8.CYRIB$label.parameter.rot <- 90
 chr8.CYRIB$lwd <- 1
 chr8.CYRIB$shape <- "diamond"
 
-pdf(file = paste0("./MYC.pdf"),width=68,height=5, onefile = T)
+pdf(file = paste0("./All_MYC_BCL2_SV_related_breakpoints.pdf"),width=18,height=5, onefile = T)
 
-#lolliplot(chr18 ,      features,  legend=NULL, txtSize=1,cex=1,rescale = F,lwd=0.1)
+lolliplot(chr18 ,      features,  legend=NULL, txtSize=1,cex=1,rescale = F,lwd=0.1)
 lolliplot(chr8  ,      features2, legend=NULL, txtSize=1,cex=1,rescale = F,lwd=0.1)
-#lolliplot(chr14 ,      features3, legend=NULL, txtSize=1,cex=1,rescale = F,lwd=0.1)
-#lolliplot(chr3  ,      features4, legend=NULL, txtSize=1,cex=1,rescale = F,lwd=0.1)
-#lolliplot(chr22 ,      features5, legend=NULL, txtSize=1,cex=1,rescale = F,lwd=0.1)
-#lolliplot(chr12 ,      features6, legend=NULL, txtSize=1,cex=1,rescale = F,lwd=0.1)
-#lolliplot(chr8.CYRIB , features7, legend=NULL, txtSize=1,cex=1,rescale = F,lwd=0.1)
+lolliplot(chr14 ,      features3, legend=NULL, txtSize=1,cex=1,rescale = F,lwd=0.1)
+lolliplot(chr3  ,      features4, legend=NULL, txtSize=1,cex=1,rescale = F,lwd=0.1)
+lolliplot(chr22 ,      features5, legend=NULL, txtSize=1,cex=1,rescale = F,lwd=0.1)
+lolliplot(chr12 ,      features6, legend=NULL, txtSize=1,cex=1,rescale = F,lwd=0.1)
+lolliplot(chr8.CYRIB , features7, legend=NULL, txtSize=1,cex=1,rescale = F,lwd=0.1)
 
 dev.off() 
 
