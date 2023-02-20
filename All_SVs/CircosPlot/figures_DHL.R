@@ -74,7 +74,7 @@ names(sv2_end)[1:3] = c("chromosome","start","end")
 names(sv1_start)[1:3] = c("chromosome","start","end")
 names(sv1_end)[1:3] = c("chromosome","start","end")
 
-pdf(file = paste0("./Figure1C_DHL.pdf"),width=10,height=8, onefile = T)
+pdf(file = paste0("./SV_DHL.pdf"),width=10,height=8, onefile = T)
 
 circos.clear()
 chromosome.index = paste0("chr", c(1:22,"X","Y"))
