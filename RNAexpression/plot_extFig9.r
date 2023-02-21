@@ -28,7 +28,7 @@ gg_color_hue <- function(n) {
 Sample_features <- read.delim("./CellLine/Info_allCellLines.txt",sep = "\t",header = T)
 samples <- data.frame(Sample_features)
 rownames(samples) <- Sample_features$case
-samples <- samples[which(samples$Batch %in% c("CCLE","GSE207388") & samples$Type != "Unknown"),]
+samples <- samples[which(samples$Batch %in% c("CCLE","GSE207388") & samples$Type != "Unknown" & samples$Disease=="DLBCL"),]
 
 ################
 counts1 <- read.csv("./CellLine/RNA_allCellLines.txt", sep="\t", head=T, row.names = "Geneid")
@@ -66,16 +66,13 @@ scale_rows = function(x){
 
 ############3
 CellLine <- read.delim("./CellLine/cells.txt",sep = "\t",header = T)
-CellLine <- CellLine[which(CellLine$TSS2!="Unk"),] # & CellLine$Histology=="GCB"),]
 
 Sample <- samples[which(samples$Cell %in% CellLine$Cell),]
 data <- expMatrix_new[,which(colnames(expMatrix_new) %in% Sample$case)]
 
-gene <- c("BCL7A","MLXIP","B3GNT4","PAX5","ZCCHC7","AICDA")
+gene <- c("PAX5","ZCCHC7","AICDA")
 pair_exp <- data.frame(t(data[which(rownames(data) %in% gene),]))
 Sample <- cbind(Sample,pair_exp)
-
-Sample<- Sample[which(Sample$Batch!="BCcancer" ),]
 
 CellLine$exp_ZCCHC7 <- 0
 CellLine$exp_PAX5 <- 0
