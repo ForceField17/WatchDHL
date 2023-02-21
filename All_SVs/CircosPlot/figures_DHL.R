@@ -43,7 +43,7 @@ annoteSVwithGene <-function(tmp_sv_bed, hg38g){
 }
 
 ######Figure1
-datafile <- read.table("DHL_P26789.sv.txt",header = T)
+datafile <- read.table("DHL.confident_SVs.txt",header = T)
 other <- datafile[which(datafile$Type!="BND"),]
 transloc <- datafile[which(datafile$Type=="BND"),]
 
