@@ -3,6 +3,7 @@ library(rstudioapi)
 library("ggplot2")
 library("gridExtra")
 library(grid)
+library(matrixStats)
 # Getting the path of your current open file
 current_path = rstudioapi::getActiveDocumentContext()$path 
 setwd(dirname(current_path ))

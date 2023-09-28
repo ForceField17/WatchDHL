@@ -41,7 +41,7 @@ the<-compare_means(NumINS ~ SVgene,  data = plot.table,paired = F )
 #NAN_plot<- NAN_plot +stat_compare_means(comparisons = my_comparisons)
 NAN_plot <- NAN_plot +stat_pvalue_manual(
   the, label = NULL, 
-  y.position = c( 26.6)
+  y.position = c( 260.6)
 )
 
 

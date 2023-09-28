@@ -48,7 +48,7 @@ histology.plot<-ggplot() +
         legend.margin=margin(t=0.1,r=0.1,b=0,l=0.1,unit='cm'),legend.text=element_text(size=14,face='plain',color='black'),axis.text.y=element_text(size=14,face='bold',color='black'),axis.line.y = element_blank(),
         axis.text.x=element_text(size=16,face='bold',color='black'),axis.title.x=element_text(size=18,vjust=-1,face='plain',color='black'),axis.title.y=element_text(size=16,hjust=0.5,vjust=2,face='plain',color='black'))
 
-histology.plot<-histology.plot + scale_color_manual(name="Grade",values=c(a_FL=gg_color_hue(6)[3],b_DHL=gg_color_hue(6)[1]),labels=c(a_FL="FL",b_DHL="DHL"),guide = guide_legend(override.aes=list(size=3.5),nrow=2),na.translate = F)
+histology.plot<-histology.plot + scale_color_manual(name="Grade",values=c(a_FL=gg_color_hue(6)[3],b_DHL="#d01c8b"),labels=c(a_FL="FL",b_DHL="DHL"),guide = guide_legend(override.aes=list(size=3.5),nrow=2),na.translate = F)
 histology.plot<-histology.plot + scale_x_continuous(expand=c(0,0),limits = c(-0.3,14),breaks = seq(0,14,2))
 
 figure_1<-rbind(ggplotGrob(histology.plot),size="first")

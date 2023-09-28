@@ -46,13 +46,13 @@ the<-compare_means(Min_CpG ~ Locus,  data = tableA,paired = T )
 #NAN_plot<- NAN_plot +stat_compare_means(comparisons = my_comparisons)
 NAN_plot <- NAN_plot +stat_pvalue_manual(
   the, label = NULL, 
-  y.position = c( 16)
+  y.position = c( 160)
 )
 
 
 figure_2<-rbind(ggplotGrob(NAN_plot),size="last")
 
-ggsave(file="ExtFig1d_CpG_BCL2.pdf", plot=figure_2,bg = 'white', width =11, height = 12, units = 'cm', dpi = 600)
+ggsave(file="ExtFig1d_CpG_BCL2.pdf", plot=figure_2,bg = 'white', width =11, height = 10, units = 'cm', dpi = 600)
 
 
 
@@ -75,12 +75,12 @@ NAN_plot <- NAN_plot + scale_y_continuous(expand=c(0,0),limits=c(-0.5,30),breaks
 #NAN_plot <- NAN_plot + scale_x_discrete(labels=c(B.FL="FL \ntumor",C.DHL="DHL \ntumor"))#
 NAN_plot<- NAN_plot +ylab("Distance from nearest CpG to breakpoint") +xlab(NULL)
 NAN_plot <- NAN_plot + scale_fill_manual(name=NULL,values = c("#fdb462","#80b1d3"))
-NAN_plot <- NAN_plot + scale_color_manual(name=NULL,values = c(gg_color_hue(6)[3],gg_color_hue(6)[1]))
+NAN_plot <- NAN_plot + scale_color_manual(name=NULL,values = c(gg_color_hue(6)[3],"#d01c8b"))
 the<-compare_means(Min_CpG ~ bp,  data = tableB,paired = T )
 #NAN_plot<- NAN_plot +stat_compare_means(comparisons = my_comparisons)
 NAN_plot <- NAN_plot +stat_pvalue_manual(
   the, label = NULL, 
-  y.position = c( 28.5)
+  y.position = c( 280.5)
 )
 
 
@@ -106,7 +106,7 @@ NAN_plot <- NAN_plot + scale_y_continuous(expand=c(0,0),limits=c(-0.5,32),breaks
 #NAN_plot <- NAN_plot + scale_x_discrete(labels=c(B.FL="FL \ntumor",C.DHL="DHL \ntumor"))#
 NAN_plot<- NAN_plot +ylab("Distance from nearest CpG to breakpoint") +xlab(NULL)
 NAN_plot <- NAN_plot + scale_fill_manual(name=NULL,values = c("#fdb462","#80b1d3"))
-NAN_plot <- NAN_plot + scale_color_manual(name=NULL,values = c(gg_color_hue(6)[3],gg_color_hue(6)[1]))
+NAN_plot <- NAN_plot + scale_color_manual(name=NULL,values = c(gg_color_hue(6)[3],"#d01c8b"))
 the<-compare_means(Min_CpG ~ bp,  data = tableC,paired = F )
 #NAN_plot<- NAN_plot +stat_compare_means(comparisons = my_comparisons)
 NAN_plot <- NAN_plot +stat_pvalue_manual(
@@ -139,16 +139,16 @@ NAN_plot <- NAN_plot + scale_y_continuous(expand=c(0,0),limits=c(-0.5,17),breaks
 #NAN_plot <- NAN_plot + scale_x_discrete(labels=c(B.FL="FL \ntumor",C.DHL="DHL \ntumor"))#
 NAN_plot<- NAN_plot +ylab("Distance from nearest CpG to breakpoint") +xlab(NULL)
 NAN_plot <- NAN_plot + scale_fill_manual(name=NULL,values = c("#bc80bd","#00FF0040"))
-NAN_plot <- NAN_plot + scale_color_manual(name=NULL,values = c(gg_color_hue(6)[1],gg_color_hue(6)[1]))
+NAN_plot <- NAN_plot + scale_color_manual(name=NULL,values = c("#d01c8b","#d01c8b"))
 the<-compare_means(Min_CpG ~ Locus,  data = tableD,paired = T )
 #NAN_plot<- NAN_plot +stat_compare_means(comparisons = my_comparisons)
 NAN_plot <- NAN_plot +stat_pvalue_manual(
   the, label = NULL, 
-  y.position = c( 16)
+  y.position = c( 160)
 )
 
 
 figure_2<-rbind(ggplotGrob(NAN_plot),size="last")
 
-ggsave(file="ExtFig1d_CpG_IgH_MYC.pdf", plot=figure_2,bg = 'white', width =11, height = 12, units = 'cm', dpi = 600)
+ggsave(file="ExtFig1d_CpG_IgH_MYC.pdf", plot=figure_2,bg = 'white', width =11, height = 10, units = 'cm', dpi = 600)
 
