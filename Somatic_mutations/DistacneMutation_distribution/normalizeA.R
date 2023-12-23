@@ -46,7 +46,7 @@ DHL2 <-  DHL2[,which(colnames(DHL2) %in% list)]
 samples <- rbind(FL,FL2,DHL,DHL2)
 
 myH3K27ac <- cbind(rbind(FL,FL2),rbind(DHL,DHL2))
-#write.table(myH3K27ac,file ="./Source_H3K27ac.txt", sep = "\t",quote = F,row.names = F)
+write.table(myH3K27ac,file ="./Source_H3K27ac.txt", sep = "\t",quote = F,row.names = F)
 
 All_Mut <- samples
 
@@ -55,7 +55,7 @@ All_Mut$xxxx[which(All_Mut$xxxx<0)] <- 0
 cumAge <- ggplot()+theme_classic()
 cumAge <- cumAge + geom_vline(xintercept = 0,color="grey",size=0.4,linetype=2)
 cumAge <- cumAge + geom_line(data=All_Mut,aes(x=Distance,y=Burden.avg,color=V1), alpha=1,size=0.7)
-cumAge <- cumAge + geom_errorbar(data=All_Mut,width=0,size=0.2, aes(x=Distance,ymin=xxxx, ymax=Burden.avg+Burden.sd,color=V1),alpha=0.1)
+cumAge <- cumAge + geom_errorbar(data=All_Mut,width=0,size=0.2, aes(x=Distance,ymin=xxxx, ymax=Burden.avg+Burden.sd,color=V1),alpha=0.2)
 #cumAge <- cumAge + geom_point(data=All_Mut,aes(x=Distance,y=Burden*1000000,color=V1), alpha=0.85,size=1)
 cumAge<- cumAge +theme(panel.background=element_rect(fill='transparent',color='transparent'),plot.margin=unit(c(2,0.9,2,2),'lines'),
                        plot.title=element_text(size=34,vjust=0.5,hjust=0.5,face='bold.italic',color='transparent'),text=element_text(size=14,face='bold'),
@@ -71,7 +71,7 @@ colnames(table2) <- c("Xaxis","Yaxis")
 table3 <- data.frame(c(0,1000),c(0.0085,0.0085))
 colnames(table3) <- c("Xaxis","Yaxis")
 #cumAge <- cumAge + geom_path( data=table3, aes(x=Xaxis,y=Yaxis),alpha=1,size=1,color="black",arrow = arrow(length = unit(0.18, "cm"),type = "closed"))
-cumAge <- cumAge + scale_colour_manual(name=NULL,values=c(DHL=gg_color_hue(6)[1] ,FL=gg_color_hue(6)[3])) 
+cumAge <- cumAge + scale_colour_manual(name=NULL,values=c(DHL="#d01c8b" ,FL=gg_color_hue(6)[3])) 
 
 
 
@@ -107,7 +107,7 @@ DHL2 <-  DHL2[,which(colnames(DHL2) %in% list)]
 samples <- rbind(FL,FL2,DHL,DHL2)
 
 myH3K4me3 <- cbind(rbind(FL,FL2),rbind(DHL,DHL2))
-#write.table(myH3K4me3,file ="./Source_H3K4me3.txt", sep = "\t",quote = F,row.names = F)
+write.table(myH3K4me3,file ="./Source_H3K4me3.txt", sep = "\t",quote = F,row.names = F)
 
 
 All_Mut <- samples
@@ -117,7 +117,7 @@ All_Mut$xxxx[which(All_Mut$xxxx<0)] <- 0
 cumAge2 <- ggplot()+theme_classic()
 cumAge2 <- cumAge2 + geom_vline(xintercept = 0,color="grey",size=0.4,linetype=2)
 cumAge2 <- cumAge2 + geom_line(data=All_Mut,aes(x=Distance,y=Burden.avg,color=V1), alpha=1,size=0.7)
-cumAge2 <- cumAge2 + geom_errorbar(data=All_Mut,width=0,size=0.2, aes(x=Distance,ymin=xxxx, ymax=Burden.avg+Burden.sd,color=V1),alpha=0.1)
+cumAge2 <- cumAge2 + geom_errorbar(data=All_Mut,width=0,size=0.2, aes(x=Distance,ymin=xxxx, ymax=Burden.avg+Burden.sd,color=V1),alpha=0.2)
 #cumAge2 <- cumAge2 + geom_point(data=All_Mut,aes(x=Distance,y=Burden*1000000,color=V1), alpha=0.85,size=1)
 cumAge2<- cumAge2 +theme(panel.background=element_rect(fill='transparent',color='transparent'),plot.margin=unit(c(2,0.9,2,1),'lines'),
                          plot.title=element_text(size=34,vjust=0.5,hjust=0.5,face='bold.italic',color='transparent'),text=element_text(size=14,face='bold'),
@@ -133,7 +133,7 @@ colnames(table2) <- c("Xaxis","Yaxis")
 table3 <- data.frame(c(0,1000),c(0.0085,0.0085))
 colnames(table3) <- c("Xaxis","Yaxis")
 #cumAge2 <- cumAge2 + geom_path( data=table3, aes(x=Xaxis,y=Yaxis),alpha=1,size=1,color="black",arrow = arrow(length = unit(0.18, "cm"),type = "closed"))
-cumAge2 <- cumAge2 + scale_colour_manual(name=NULL,values=c(DHL=gg_color_hue(6)[1] ,FL=gg_color_hue(6)[3])) 
+cumAge2 <- cumAge2 + scale_colour_manual(name=NULL,values=c(DHL="#d01c8b" ,FL=gg_color_hue(6)[3])) 
 
 
 #raw data preprocessing
@@ -168,7 +168,7 @@ DHL2 <-  DHL2[,which(colnames(DHL2) %in% list)]
 samples <- rbind(FL,FL2,DHL,DHL2)
 
 myH3K4me1 <- cbind(rbind(FL,FL2),rbind(DHL,DHL2))
-#write.table(myH3K4me1,file ="./Source_H3K4me1.txt", sep = "\t",quote = F,row.names = F)
+write.table(myH3K4me1,file ="./Source_H3K4me1.txt", sep = "\t",quote = F,row.names = F)
 
 All_Mut <- samples
 
@@ -177,7 +177,7 @@ All_Mut$xxxx[which(All_Mut$xxxx<0)] <- 0
 cumAge3 <- ggplot()+theme_classic()
 cumAge3 <- cumAge3 + geom_vline(xintercept = 0,color="grey",size=0.4,linetype=2)
 cumAge3 <- cumAge3 + geom_line(data=All_Mut,aes(x=Distance,y=Burden.avg,color=V1), alpha=1,size=0.7)
-cumAge3 <- cumAge3 + geom_errorbar(data=All_Mut,width=0,size=0.2, aes(x=Distance,ymin=xxxx, ymax=Burden.avg+Burden.sd,color=V1),alpha=0.1)
+cumAge3 <- cumAge3 + geom_errorbar(data=All_Mut,width=0,size=0.2, aes(x=Distance,ymin=xxxx, ymax=Burden.avg+Burden.sd,color=V1),alpha=0.2)
 #cumAge3 <- cumAge3 + geom_point(data=All_Mut,aes(x=Distance,y=Burden*1000000,color=V1), alpha=0.85,size=1)
 cumAge3<- cumAge3 +theme(panel.background=element_rect(fill='transparent',color='transparent'),plot.margin=unit(c(2,2,2,1),'lines'),
                          plot.title=element_text(size=34,vjust=0.5,hjust=0.5,face='bold.italic',color='transparent'),text=element_text(size=14,face='bold'),
@@ -193,8 +193,8 @@ colnames(table2) <- c("Xaxis","Yaxis")
 table3 <- data.frame(c(0,1000),c(0.0085,0.0085))
 colnames(table3) <- c("Xaxis","Yaxis")
 #cumAge3 <- cumAge3 + geom_path( data=table3, aes(x=Xaxis,y=Yaxis),alpha=1,size=1,color="black",arrow = arrow(length = unit(0.18, "cm"),type = "closed"))
-cumAge3 <- cumAge3 + scale_colour_manual(name=NULL,values=c(DHL=gg_color_hue(6)[1] ,FL=gg_color_hue(6)[3])) 
+cumAge3 <- cumAge3 + scale_colour_manual(name=NULL,values=c(DHL="#d01c8b" ,FL=gg_color_hue(6)[3])) 
 
 figure_1<-cbind(ggplotGrob(cumAge),ggplotGrob(cumAge2),ggplotGrob(cumAge3),size="first")
-ggsave(file="Fig3a_Slide_mergeA_normalized_MB.pdf", plot=figure_1,bg = 'white', width = 20, height = 10, units = 'cm', dpi = 600)
+ggsave(file="Fig4d_Slide_A_normalized_MB.pdf", plot=figure_1,bg = 'white', width = 20, height = 10, units = 'cm', dpi = 600)
 

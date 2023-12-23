@@ -34,6 +34,6 @@ revp_plot<-revp_plot+ggtitle(NULL)+xlab(NULL)+ylab("Fraction of PAX5-ZCCHC7 fusi
 revp_plot<-revp_plot+scale_fill_manual(name=NULL,values=c(BBB='#d9d9d9',AAA='#bc80bd'),labels=c(BBB='Wild type',AAA='PAX5-ZCCHC7 fusion'),guide=guide_legend(override.aes=list(size=0.5)),na.translate = F)
 revp_plot
 figure_2<-rbind(ggplotGrob(revp_plot),size="first")
-ggsave(file="ExtFig18a_incidance.pdf", plot=figure_2,bg = 'white', width = 18, height = 8, units = 'cm', dpi = 600)
+ggsave(file="ExtFig7d_incidance.pdf", plot=figure_2,bg = 'white', width = 18, height = 8, units = 'cm', dpi = 600)
 
 

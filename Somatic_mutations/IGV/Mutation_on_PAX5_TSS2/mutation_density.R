@@ -42,7 +42,7 @@ F1a.plot<-F1a.plot + scale_fill_manual(name=NULL,values=c(FL=gg_color_hue(6)[3],
 F1a.plot
 
 figure_1<-cbind(rbind(ggplotGrob(F1a.plot)))
-ggsave(file="Fig3d_zcchc7_mutation_load_3kb.pdf", plot=figure_1,bg = 'white', width = 38, height =  5, units = 'cm', dpi = 600)
+ggsave(file="Fig3c_zcchc7_mutation_load_3kb.pdf", plot=figure_1,bg = 'white', width = 38, height =  5, units = 'cm', dpi = 600)
 
 
 

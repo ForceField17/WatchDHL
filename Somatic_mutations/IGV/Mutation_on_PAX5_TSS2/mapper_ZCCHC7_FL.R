@@ -55,7 +55,7 @@ available.shapes <- c("circle", "square", "diamond",
 #sample.gr.rot$fill
 sample.gr.rot$shape <- c("triangle_point_up")
 
-pdf(file = paste0("./ExtFig3d_somatic_mutations_3kb_FL.pdf"),width=17,height=6, onefile = T)
+pdf(file = paste0("./ExtFig6e_somatic_mutations_3kb_FL.pdf"),width=17,height=6, onefile = T)
 sample.gr.rot$lwd <- 1.5
 lolliplot(sample.gr.rot, features, legend=NA, txtSize=0.18,cex=1.4)
 

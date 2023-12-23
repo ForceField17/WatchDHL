@@ -101,7 +101,7 @@ new_table <- merge(plot_1b.data,sample,1,1)
 F1b.pLot<-ggplot()+theme_classic()
 F1b.pLot<-F1b.pLot+geom_tile(data = new_table,aes(x=reorder(ID,-order),y=gene,fill=mmm),color='black',width=1,height=1,size=0.5,stat='identity')
 
-F1b.pLot<-F1b.pLot+scale_fill_manual(name="Mutation Number",values =c(a0='white',b1='#fee0d2',c2='#fcbba1',c5='#fb6a4a',d10='#ef3b2c',e20='#cb181d',f30='#a50f15',g40='#67000d'),labels=c(a0='0',b1='1',c2='>=2',c5='>=5',d10='>=10',e20='>=20',f30='>=30',g40='>=40'))
+F1b.pLot<-F1b.pLot+scale_fill_manual(name="Mutation Number",values =c(a0='white',b1='#c6dbef',c2='#9ecae1',c5='#6baed6',d10='#4292c6',e20='#2171b5',f30='#08519c',g40='#08306b'),labels=c(a0='0',b1='1',c2='>=2',c5='>=5',d10='>=10',e20='>=20',f30='>=30',g40='>=40'))
 F1b.pLot<-F1b.pLot+theme(panel.background=element_rect(fill='transparent',color='transparent',size=1.3),plot.margin=unit(c(0,1,0,1),'lines'),plot.title=element_text(size=24,vjust=0.5,hjust=0.5,face='bold.italic'),
                          text=element_text(size=24,vjust=1.4,hjust=0.5,face='bold'),legend.key.width=unit(0.6,'cm'),legend.key.height=unit(0.68,'cm'),legend.position='none',axis.ticks.x = element_blank(),axis.line.x = element_blank(),axis.line.y = element_blank(),
                          legend.direction='horizontal',legend.text=element_text(size=16,face='bold.italic'),axis.ticks.y = element_blank(), axis.text.y=element_text(size=12,vjust=0.5,hjust=1,face='plain',color='black'),
@@ -120,7 +120,7 @@ colnames(data4)<-c("xxx","yyy","zzz","his")
 
 F4b.pLot<-ggplot()+theme_classic()
 F4b.pLot<-F4b.pLot+geom_tile(data = data4,aes(x=reorder(xxx,zzz),y=yyy,fill=his),color='black',width=1,height=1,size=0.5,stat='identity')
-F4b.pLot<-F4b.pLot+scale_fill_manual(name=NULL,values=c(High=gg_color_hue(6)[1] ,Low=gg_color_hue(6)[3]),guide = guide_legend(override.aes=list(size=1),nrow=1),na.translate = F)
+F4b.pLot<-F4b.pLot+scale_fill_manual(name=NULL,values=c(High="#d01c8b" ,Low=gg_color_hue(6)[3]),guide = guide_legend(override.aes=list(size=1),nrow=1),na.translate = F)
 F4b.pLot<-F4b.pLot+theme(panel.background=element_rect(fill='transparent',color='transparent',size=1.3),plot.margin=unit(c(1,0.1,0.1,0.1),'lines'),plot.title=element_text(size=24,vjust=0.5,hjust=0.5,face='bold.italic'),
                          text=element_text(size=24,vjust=1.4,hjust=0.5,face='bold'),legend.key.width=unit(0.4,'cm'),legend.key.height=unit(0.4,'cm'),legend.position='none',axis.ticks.x = element_blank(),axis.line.x = element_blank(),axis.line.y = element_blank(),
                          legend.direction='horizontal',legend.text=element_text(size=12,face='bold.italic'),axis.ticks.y = element_blank(), axis.text.y=element_blank(),legend.title=element_blank(),
@@ -199,7 +199,7 @@ new_table <- merge(plot_1b.data,sample,1,1)
 F1b.ploT<-ggplot()+theme_classic()
 F1b.ploT<-F1b.ploT+geom_tile(data = new_table,aes(x=reorder(ID,-order),y=gene,fill=mmm),color='black',width=1,height=1,size=0.5,stat='identity')
 
-F1b.ploT<-F1b.ploT+scale_fill_manual(name="Mutation Number",values =c(a0='white',b1='#fee0d2',c2='#fcbba1',c5='#fb6a4a',d10='#ef3b2c',e20='#cb181d',f30='#a50f15',g40='#67000d'),labels=c(a0='0',b1='1',c2='>=2',c5='>=5',d10='>=10',e20='>=20',f30='>=30',g40='>=40'))
+F1b.ploT<-F1b.ploT+scale_fill_manual(name="Mutation Number",values =c(a0='white',b1='#c6dbef',c2='#9ecae1',c5='#6baed6',d10='#4292c6',e20='#2171b5',f30='#08519c',g40='#08306b'),labels=c(a0='0',b1='1',c2='>=2',c5='>=5',d10='>=10',e20='>=20',f30='>=30',g40='>=40'))
 F1b.ploT<-F1b.ploT+theme(panel.background=element_rect(fill='transparent',color='transparent',size=1.3),plot.margin=unit(c(0,1,0,1),'lines'),plot.title=element_text(size=24,vjust=0.5,hjust=0.5,face='bold.italic'),
                          text=element_text(size=24,vjust=1.4,hjust=0.5,face='bold'),legend.key.width=unit(0.6,'cm'),legend.key.height=unit(0.68,'cm'),legend.position='none',axis.ticks.x = element_blank(),axis.line.x = element_blank(),axis.line.y = element_blank(),
                          legend.direction='horizontal',legend.text=element_text(size=16,face='bold.italic'),axis.text.y=element_text(size=12,vjust=0.5,hjust=1,face='plain',color='black'),axis.line = element_blank(),axis.ticks.y = element_blank(),
@@ -207,6 +207,14 @@ F1b.ploT<-F1b.ploT+theme(panel.background=element_rect(fill='transparent',color=
 F1b.ploT<-F1b.ploT+scale_x_discrete(position = "bottom")+xlab(NULL)+ylab(NULL)+coord_flip()
 F1b.ploT
 gene.scale1b = 1 + (ncol(mutation_gene_table) - 14)/14
+
+#a0='white',b1='#c6dbef',c2='#9ecae1',c5='#6baed6',d10='#4292c6',e20='#2171b5',f30='#08519c',g40='#08306b'
+
+
+
+
+
+
 
 
 
@@ -218,7 +226,7 @@ colnames(data4)<-c("xxx","yyy","zzz","his")
 
 F4b.ploT<-ggplot()+theme_classic()
 F4b.ploT<-F4b.ploT+geom_tile(data = data4,aes(x=reorder(xxx,zzz),y=yyy,fill=his),color='black',width=1,height=1,size=0.5,stat='identity')
-F4b.ploT<-F4b.ploT+scale_fill_manual(name=NULL,values=c(High=gg_color_hue(6)[1] ,Low=gg_color_hue(6)[3]),guide = guide_legend(override.aes=list(size=1),nrow=1),na.translate = F)
+F4b.ploT<-F4b.ploT+scale_fill_manual(name=NULL,values=c(High="#d01c8b" ,Low=gg_color_hue(6)[3]),guide = guide_legend(override.aes=list(size=1),nrow=1),na.translate = F)
 F4b.ploT<-F4b.ploT+theme(panel.background=element_rect(fill='transparent',color='transparent',size=1.3),plot.margin=unit(c(1,0.1,0.1,0.1),'lines'),plot.title=element_text(size=24,vjust=0.5,hjust=0.5,face='bold.italic'),
                          text=element_text(size=24,vjust=1.4,hjust=0.5,face='bold'),legend.key.width=unit(0.4,'cm'),legend.key.height=unit(0.4,'cm'),legend.position='none',axis.ticks.x = element_blank(),axis.line.x = element_blank(),axis.line.y = element_blank(),
                          legend.direction='horizontal',legend.text=element_text(size=12,face='bold.italic'),axis.text.y=element_text(size=14,vjust=0.5,hjust=1,face='bold.italic',color='black'),legend.title=element_blank(),axis.ticks.y = element_blank(),
@@ -298,7 +306,7 @@ new_table <- merge(plot_1b.data,sample,1,1)
 F1b.plOT<-ggplot()+theme_classic()
 F1b.plOT<-F1b.plOT+geom_tile(data = new_table,aes(x=reorder(ID,-order),y=gene,fill=mmm),color='black',width=1,height=1,size=0.5,stat='identity')
 
-F1b.plOT<-F1b.plOT+scale_fill_manual(name="Mutation Number",values =c(a0='white',b1='#fee0d2',c2='#fcbba1',c5='#fb6a4a',d10='#ef3b2c',e20='#cb181d',f30='#a50f15',g40='#67000d'),labels=c(a0='0',b1='1',c2='>=2',c5='>=5',d10='>=10',e20='>=20',f30='>=30',g40='>=40'))
+F1b.plOT<-F1b.plOT+scale_fill_manual(name="Mutation Number",values =c(a0='white',b1='#c6dbef',c2='#9ecae1',c5='#6baed6',d10='#4292c6',e20='#2171b5',f30='#08519c',g40='#08306b'),labels=c(a0='0',b1='1',c2='>=2',c5='>=5',d10='>=10',e20='>=20',f30='>=30',g40='>=40'))
 F1b.plOT<-F1b.plOT+theme(panel.background=element_rect(fill='transparent',color='transparent',size=1.3),plot.margin=unit(c(0,1,0,1),'lines'),plot.title=element_text(size=24,vjust=0.5,hjust=0.5,face='bold.italic'),
                          text=element_text(size=24,vjust=1.4,hjust=0.5,face='bold'),legend.key.width=unit(0.6,'cm'),legend.key.height=unit(0.68,'cm'),legend.position='none',axis.ticks.x = element_blank(),axis.line.x = element_blank(),axis.line.y = element_blank(),
                          legend.direction='horizontal',legend.text=element_text(size=16,face='bold.italic'),axis.ticks.y = element_blank(), axis.text.y=element_text(size=12,vjust=0.5,hjust=1,face='plain',color='black'),
@@ -317,7 +325,7 @@ colnames(data4)<-c("xxx","yyy","zzz","his")
 
 F4b.plOT<-ggplot()+theme_classic()
 F4b.plOT<-F4b.plOT+geom_tile(data = data4,aes(x=reorder(xxx,zzz),y=yyy,fill=his),color='black',width=1,height=1,size=0.5,stat='identity')
-F4b.plOT<-F4b.plOT+scale_fill_manual(name=NULL,values=c(High=gg_color_hue(6)[1] ,Low=gg_color_hue(6)[3]),guide = guide_legend(override.aes=list(size=1),nrow=1),na.translate = F)
+F4b.plOT<-F4b.plOT+scale_fill_manual(name=NULL,values=c(High="#d01c8b" ,Low=gg_color_hue(6)[3]),guide = guide_legend(override.aes=list(size=1),nrow=1),na.translate = F)
 F4b.plOT<-F4b.plOT+theme(panel.background=element_rect(fill='transparent',color='transparent',size=1.3),plot.margin=unit(c(1,0.1,0.1,0.1),'lines'),plot.title=element_text(size=24,vjust=0.5,hjust=0.5,face='bold.italic'),
                          text=element_text(size=24,vjust=1.4,hjust=0.5,face='bold'),legend.key.width=unit(0.4,'cm'),legend.key.height=unit(0.4,'cm'),legend.position='none',axis.ticks.x = element_blank(),axis.line.x = element_blank(),axis.line.y = element_blank(),
                          legend.direction='horizontal',legend.text=element_text(size=12,face='bold.italic'),axis.ticks.y = element_blank(), axis.text.y=element_blank(),legend.title=element_blank(),
@@ -397,7 +405,7 @@ new_table <- merge(plot_1b.data,sample,1,1)
 F1b.PLoT<-ggplot()+theme_classic()
 F1b.PLoT<-F1b.PLoT+geom_tile(data = new_table,aes(x=reorder(ID,-order),y=gene,fill=mmm),color='black',width=1,height=1,size=0.5,stat='identity')
 
-F1b.PLoT<-F1b.PLoT+scale_fill_manual(name="Mutation Number",values =c(a0='white',b1='#fee0d2',c2='#fcbba1',c5='#fb6a4a',d10='#ef3b2c',e20='#cb181d',f30='#a50f15',g40='#67000d'),labels=c(a0='0',b1='1',c2='>=2',c5='>=5',d10='>=10',e20='>=20',f30='>=30',g40='>=40'))
+F1b.PLoT<-F1b.PLoT+scale_fill_manual(name="Mutation Number",values =c(a0='white',b1='#c6dbef',c2='#9ecae1',c5='#6baed6',d10='#4292c6',e20='#2171b5',f30='#08519c',g40='#08306b'),labels=c(a0='0',b1='1',c2='>=2',c5='>=5',d10='>=10',e20='>=20',f30='>=30',g40='>=40'))
 F1b.PLoT<-F1b.PLoT+theme(panel.background=element_rect(fill='transparent',color='transparent',size=1.3),plot.margin=unit(c(0,1,0,1),'lines'),plot.title=element_text(size=24,vjust=0.5,hjust=0.5,face='bold.italic'),
                          text=element_text(size=24,vjust=1.4,hjust=0.5,face='bold'),legend.key.width=unit(0.6,'cm'),legend.key.height=unit(0.68,'cm'),legend.position='none',axis.ticks.x = element_blank(),axis.line.x = element_blank(),axis.line.y = element_blank(),
                          legend.direction='horizontal',legend.text=element_text(size=16,face='bold.italic'),axis.ticks.y = element_blank(), axis.text.y=element_text(size=12,vjust=0.5,hjust=1,face='plain',color='black'),
@@ -414,7 +422,7 @@ colnames(data4)<-c("xxx","yyy","zzz","his")
 
 F4b.PLoT<-ggplot()+theme_classic()
 F4b.PLoT<-F4b.PLoT+geom_tile(data = data4,aes(x=reorder(xxx,zzz),y=yyy,fill=his),color='black',width=1,height=1,size=0.5,stat='identity')
-F4b.PLoT<-F4b.PLoT+scale_fill_manual(name=NULL,values=c(High=gg_color_hue(6)[1] ,Low=gg_color_hue(6)[3]),guide = guide_legend(override.aes=list(size=1),nrow=1),na.translate = F)
+F4b.PLoT<-F4b.PLoT+scale_fill_manual(name=NULL,values=c(High="#d01c8b" ,Low=gg_color_hue(6)[3]),guide = guide_legend(override.aes=list(size=1),nrow=1),na.translate = F)
 F4b.PLoT<-F4b.PLoT+theme(panel.background=element_rect(fill='transparent',color='transparent',size=1.3),plot.margin=unit(c(1,0.1,0.1,0.1),'lines'),plot.title=element_text(size=24,vjust=0.5,hjust=0.5,face='bold.italic'),
                          text=element_text(size=24,vjust=1.4,hjust=0.5,face='bold'),legend.key.width=unit(0.4,'cm'),legend.key.height=unit(0.4,'cm'),legend.position='none',axis.ticks.x = element_blank(),axis.line.x = element_blank(),axis.line.y = element_blank(),
                          legend.direction='horizontal',legend.text=element_text(size=12,face='bold.italic'),axis.ticks.y = element_blank(), axis.text.y=element_blank(),legend.title=element_blank(),
@@ -493,7 +501,7 @@ new_table <- merge(plot_1b.data,sample,1,1)
 F1b.PlOT<-ggplot()+theme_classic()
 F1b.PlOT<-F1b.PlOT+geom_tile(data = new_table,aes(x=reorder(ID,-order),y=gene,fill=mmm),color='black',width=1,height=1,size=0.5,stat='identity')
 
-F1b.PlOT<-F1b.PlOT+scale_fill_manual(name="Mutation Number",values =c(a0='white',b1='#fee0d2',c2='#fcbba1',c5='#fb6a4a',d10='#ef3b2c',e20='#cb181d',f30='#a50f15',g40='#67000d'),labels=c(a0='0',b1='1',c2='>=2',c5='>=5',d10='>=10',e20='>=20',f30='>=30',g40='>=40'))
+F1b.PlOT<-F1b.PlOT+scale_fill_manual(name="Mutation Number",values =c(a0='white',b1='#c6dbef',c2='#9ecae1',c5='#6baed6',d10='#4292c6',e20='#2171b5',f30='#08519c',g40='#08306b'),labels=c(a0='0',b1='1',c2='>=2',c5='>=5',d10='>=10',e20='>=20',f30='>=30',g40='>=40'))
 F1b.PlOT<-F1b.PlOT+theme(panel.background=element_rect(fill='transparent',color='transparent',size=1.3),plot.margin=unit(c(0,1,0,1),'lines'),plot.title=element_text(size=24,vjust=0.5,hjust=0.5,face='bold.italic'),
                          text=element_text(size=24,vjust=1.4,hjust=0.5,face='bold'),legend.key.width=unit(0.6,'cm'),legend.key.height=unit(0.68,'cm'),legend.position='none',axis.ticks.x = element_blank(),axis.line.x = element_blank(),axis.line.y = element_blank(),
                          legend.direction='horizontal',legend.text=element_text(size=16,face='bold.italic'),axis.ticks.y = element_blank(), axis.text.y=element_text(size=12,vjust=0.5,hjust=1,face='plain',color='black'),
@@ -514,7 +522,7 @@ colnames(data5)<-c("xxx","yyy","zzz","his")
 
 F4b.PlOT<-ggplot()+theme_classic()
 F4b.PlOT<-F4b.PlOT+geom_tile(data = data4,aes(x=reorder(xxx,zzz),y=yyy,fill=his),color='black',width=1,height=1,size=0.5,stat='identity')
-F4b.PlOT<-F4b.PlOT+scale_fill_manual(name=NULL,values=c(High=gg_color_hue(6)[1] ,Low=gg_color_hue(6)[3]),guide = guide_legend(override.aes=list(size=1),nrow=1),na.translate = F)
+F4b.PlOT<-F4b.PlOT+scale_fill_manual(name=NULL,values=c(High="#d01c8b" ,Low=gg_color_hue(6)[3]),guide = guide_legend(override.aes=list(size=1),nrow=1),na.translate = F)
 F4b.PlOT<-F4b.PlOT+theme(panel.background=element_rect(fill='transparent',color='transparent',size=1.3),plot.margin=unit(c(1,0.1,0.1,0.1),'lines'),plot.title=element_text(size=24,vjust=0.5,hjust=0.5,face='bold.italic'),
                          text=element_text(size=24,vjust=1.4,hjust=0.5,face='bold'),legend.key.width=unit(0.4,'cm'),legend.key.height=unit(0.4,'cm'),legend.position='none',axis.ticks.x = element_blank(),axis.line.x = element_blank(),axis.line.y = element_blank(),
                          legend.direction='horizontal',legend.text=element_text(size=12,face='bold.italic'),axis.ticks.y = element_blank(), axis.text.y=element_blank(),legend.title=element_blank(),
@@ -594,7 +602,7 @@ new_table <- merge(plot_1b.data,sample,1,1)
 F1b.PloT<-ggplot()+theme_classic()
 F1b.PloT<-F1b.PloT+geom_tile(data = new_table,aes(x=reorder(ID,-order),y=gene,fill=mmm),color='black',width=1,height=1,size=0.5,stat='identity')
 
-F1b.PloT<-F1b.PloT+scale_fill_manual(name="Mutation Number",values =c(a0='white',b1='#fee0d2',c2='#fcbba1',c5='#fb6a4a',d10='#ef3b2c',e20='#cb181d',f30='#a50f15',g40='#67000d'),labels=c(a0='0',b1='1',c2='>=2',c5='>=5',d10='>=10',e20='>=20',f30='>=30',g40='>=40'))
+F1b.PloT<-F1b.PloT+scale_fill_manual(name="Mutation Number",values =c(a0='white',b1='#c6dbef',c2='#9ecae1',c5='#6baed6',d10='#4292c6',e20='#2171b5',f30='#08519c',g40='#08306b'),labels=c(a0='0',b1='1',c2='>=2',c5='>=5',d10='>=10',e20='>=20',f30='>=30',g40='>=40'))
 F1b.PloT<-F1b.PloT+theme(panel.background=element_rect(fill='transparent',color='transparent',size=1.3),plot.margin=unit(c(0,1,1,1),'lines'),plot.title=element_text(size=24,vjust=0.5,hjust=0.5,face='bold.italic'),
                          text=element_text(size=24,vjust=1.4,hjust=0.5,face='bold'),legend.key.width=unit(0.6,'cm'),legend.key.height=unit(0.68,'cm'),legend.position='none',axis.line.x = element_blank(),axis.line.y = element_blank(),
                          legend.direction='horizontal',legend.text=element_text(size=16,face='bold.italic'),axis.ticks.y = element_blank(), axis.text.y=element_text(size=12,vjust=0.5,hjust=1,face='plain',color='black'),
@@ -611,7 +619,7 @@ colnames(data4)<-c("xxx","yyy","zzz","his")
 
 F4b.PloT<-ggplot()+theme_classic()
 F4b.PloT<-F4b.PloT+geom_tile(data = data4,aes(x=reorder(xxx,zzz),y=yyy,fill=his),color='black',width=1,height=1,size=0.5,stat='identity')
-F4b.PloT<-F4b.PloT+scale_fill_manual(name=NULL,values=c(High=gg_color_hue(6)[1] ,Low=gg_color_hue(6)[3]),guide = guide_legend(override.aes=list(size=1),nrow=1),na.translate = F)
+F4b.PloT<-F4b.PloT+scale_fill_manual(name=NULL,values=c(High="#d01c8b" ,Low=gg_color_hue(6)[3]),guide = guide_legend(override.aes=list(size=1),nrow=1),na.translate = F)
 F4b.PloT<-F4b.PloT+theme(panel.background=element_rect(fill='transparent',color='transparent',size=1.3),plot.margin=unit(c(0.1,1,1,1),'lines'),plot.title=element_text(size=24,vjust=0.5,hjust=0.5,face='bold.italic'),
                          text=element_text(size=24,vjust=1.4,hjust=0.5,face='bold'),legend.key.width=unit(0.4,'cm'),legend.key.height=unit(0.4,'cm'),legend.position='none',axis.ticks.x = element_blank(),axis.line.x = element_blank(),axis.line.y = element_blank(),
                          legend.direction='horizontal',legend.text=element_text(size=12,face='bold.italic'),axis.ticks.y = element_blank(), axis.text.y=element_blank(),legend.title=element_blank(),
@@ -637,7 +645,7 @@ ffff_plot<-ffff_plot+theme(panel.background=element_rect(fill='transparent',colo
                            legend.key.width=unit(0.7,'cm'),legend.key.height=unit(0.7,'cm'),legend.position="none",axis.text.x=element_blank(),
                            legend.text=element_text(size=15,face='bold.italic'),axis.text.y=element_text(size=12,face='plain',color='black'),axis.title.y=element_blank())
 ffff_plot<-ffff_plot+ggtitle(NULL)+xlab(NULL)+scale_x_discrete(position = "bottom")+ylab(NULL)
-ffff_plot<-ffff_plot+scale_fill_manual(name=NULL,values=c(DHL=gg_color_hue(6)[1] ,aFL=gg_color_hue(6)[3]))
+ffff_plot<-ffff_plot+scale_fill_manual(name=NULL,values=c(DHL="#d01c8b" ,aFL=gg_color_hue(6)[3]))
 
 ffff_plot
 
@@ -661,7 +669,7 @@ figure_1$heights[panels][7] <- unit(2/5,'null')
 
 
 #grid.draw(figure_1)
-ggsave(file="ExtFig2d_landscape_noncoding_v4.pdf", plot=figure_1,bg = 'white', width = 30, height = 13, units = 'cm', dpi = 600)
+ggsave(file="Fig2d_landscape_noncoding.pdf", plot=figure_1,bg = 'white', width = 30, height = 13, units = 'cm', dpi = 600)
 
 
 

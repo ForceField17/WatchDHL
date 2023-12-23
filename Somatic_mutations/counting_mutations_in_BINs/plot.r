@@ -64,6 +64,6 @@ ffff_plot<-ffff_plot+scale_size(name=NULL,range=c(1,6),breaks = c(5,10,20,40,80)
 
 
 figure_1<-rbind(ggplotGrob(ffff_plot))
-ggsave(file="Figure3B.pdf", plot=figure_1,bg = 'white', width = 27, height =  11.5, units = 'cm', dpi = 600)
+ggsave(file="Figure4b.pdf", plot=figure_1,bg = 'white', width = 27, height =  11.5, units = 'cm', dpi = 600)
 
 

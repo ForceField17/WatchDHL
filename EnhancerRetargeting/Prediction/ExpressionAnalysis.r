@@ -15,6 +15,7 @@ library(ComplexHeatmap)
 library(circlize)
 library("SC3")
 library("ggrepel")
+library("preprocessCore")
 
 gg_color_hue <- function(n) {
   hues = seq(15, 375, length = n + 1)
@@ -86,20 +87,20 @@ for(i in 1:nrow(genePairs)){
                       stat = "identity",position = "identity",max.overlaps = getOption("ggrepel.max.overlaps", default = 30),force=1.5,
                       segment.size =0.2, size =2.4,color ='black')+
       geom_text(aes(x=-1.8,y=-2,label=paste0("pvalue = ",round(a$p.value,3))),color="blue",size=3)+
-      geom_text(aes(x=-1.8,y=-2.23,label=paste0("SCC = ",round(a$estimate,3))),color="blue",size=3)
+      geom_text(aes(x=-1.8,y=-2.23,label=paste0("RHO = ",round(a$estimate,3))),color="blue",size=3)
     new.plot<- new.plot +  theme(panel.background=element_rect(fill='transparent',color='transparent'),plot.margin=unit(c(1,1,1,1),'lines'),legend.title=element_text(size=12,face='plain',color='black'),
                                  plot.title=element_text(size=14,vjust=0.5,hjust=0.5,face='bold.italic',color='transparent'),text=element_text(size=12,face='bold'),
                                  legend.key.width=unit(0.6,'cm'),legend.key.height=unit(0.6,'cm'),legend.position="right",legend.text=element_text(size=10,hjust=0,face='plain'),
                                  axis.text.x=element_text(size=12,angle=30,vjust=1,hjust=1,face='bold',color='black'),axis.text.y=element_text(size=12,face='bold',color='black'),
                                  axis.title.x=element_text(size=12,vjust=0,hjust=0.5,face='plain',color='black'),axis.title.y=element_text(size=12,face='plain',color='black'))
-    new.plot<- new.plot+ylab(paste0("Expression of ",genePairs[i,2]))+xlab(paste0("Expression of ",genePairs[i,1]))
+    new.plot<- new.plot+ylab(paste0("Expression of ",genePairs[i,2]," (Z-score)"))+xlab(paste0("Expression of ",genePairs[i,1]," (Z-score)"))
     
     new.plot<- new.plot+scale_y_continuous(expand=c(0,0),limits=c(-2.5,2.5),breaks = seq(-2,2,1)) 
     new.plot<- new.plot+scale_x_continuous(expand=c(0,0),limits=c(-2.5,2.5),breaks = seq(-2,2,1)) 
   
     new.plot<- new.plot+ggtitle(paste0(genePairs[i,1]," --- ",genePairs[i,2]))
     plot7<-cbind(ggplotGrob(new.plot),size="first")
-    ggsave(file=paste0("./summary/ExtFig7c_linear_",genePairs[i,1],"_",genePairs[i,2],".pdf"), plot=plot7,bg = 'white', width = 10, height = 10, units = 'cm', dpi = 600)
+    ggsave(file=paste0("./summary/ExtFig4a_linear_",genePairs[i,1],"_",genePairs[i,2],".pdf"), plot=plot7,bg = 'white', width = 10, height = 10, units = 'cm', dpi = 600)
     }
     
     pValue_LR[i] <- a$p.value
@@ -109,6 +110,6 @@ for(i in 1:nrow(genePairs)){
 }
 
 resultsAmp <-data.frame(genePairs$V1,genePairs$V2,MeanExpA,MeanExpB,SpearmanR,pValue_LR,genePairs$direction)
-#write.table(resultsAmp , file = "results_table_CellLine.test.txt",sep = "\t",quote=F,row.names = F)
+write.table(resultsAmp , file = "results_table.test.txt",sep = "\t",quote=F,row.names = F)
 
 

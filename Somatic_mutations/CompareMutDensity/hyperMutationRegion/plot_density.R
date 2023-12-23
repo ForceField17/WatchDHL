@@ -54,7 +54,7 @@ plot.table3 <-plot.table[which( plot.table$case!="P8.b"),]
 
 figure_2<-rbind(ggplotGrob(NAN_plot),size="last")
 
-ggsave(file="ExtFig16c_All_density.pdf", plot=figure_2,bg = 'white', width =14, height = 10, units = 'cm', dpi = 600)
+ggsave(file="SupFig3b_All_density.pdf", plot=figure_2,bg = 'white', width =14, height = 10, units = 'cm', dpi = 600)
 
 plot.table3 <-plot.table[which( plot.table$tumor=="FL"),] 
 the<-compare_means(fraction ~ xxx,  data = plot.table3,paired = T,method = "wilcox.test" ,p.adjust.method = "fdr")

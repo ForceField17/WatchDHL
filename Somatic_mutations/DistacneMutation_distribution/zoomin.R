@@ -368,5 +368,5 @@ cumAge3 <- cumAge3 + scale_colour_manual(name=NULL,values=c(DHL=gg_color_hue(6)[
 
 figure_1<-rbind(cbind(ggplotGrob(cumAge4),ggplotGrob(cumAge5),ggplotGrob(cumAge6)),
                 cbind(ggplotGrob(cumAge),ggplotGrob(cumAge2),ggplotGrob(cumAge3)),size="first")
-ggsave(file="ExtFig16a_ZOOMIN_Slide_P126789_normalized_MB.pdf", plot=figure_1,bg = 'white', width = 34, height = 28, units = 'cm', dpi = 600)
+ggsave(file="SupFig3a_ZOOMIN_Slide_P126789_normalized_MB.pdf", plot=figure_1,bg = 'white', width = 34, height = 28, units = 'cm', dpi = 600)
 

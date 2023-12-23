@@ -15,5 +15,3 @@ WatchDHL is a pipeline for comprehensive analysis of whole genome sequencing (WG
 * The dataset consists of a series of WGS data from 8 non-Hodgkin B cell lymphoma patients progressed from FL to DHL.
 * The raw fastq files of this dataset are available on DBGAP (https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs003398.v1.p1) with controlled access.
 
-
-

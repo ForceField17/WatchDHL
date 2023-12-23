@@ -58,7 +58,7 @@ dddd_plot
 
 plot1<-cbind(ggplotGrob(dddd_plot),ggplotGrob(ffff_plot),size="last")
 grid.draw(plot1)
-ggsave(file="Standard_GisticPlot_DHL.pdf", plot=plot1,bg = 'white', width = 14, height = 20, units = 'cm', dpi = 300)
+ggsave(file="Fig3b_Standard_GisticPlot_DHL.pdf", plot=plot1,bg = 'white', width = 14, height = 20, units = 'cm', dpi = 300)
 
 
 ##########################
@@ -111,5 +111,5 @@ dddd_plot
 
 plot1<-cbind(ggplotGrob(dddd_plot),ggplotGrob(ffff_plot),size="last")
 grid.draw(plot1)
-  ggsave(file="Standard_GisticPlot_FL.pdf", plot=plot1,bg = 'white', width = 14, height = 20, units = 'cm', dpi = 300)
+  ggsave(file="Fig3a_Standard_GisticPlot_FL.pdf", plot=plot1,bg = 'white', width = 14, height = 20, units = 'cm', dpi = 300)
 

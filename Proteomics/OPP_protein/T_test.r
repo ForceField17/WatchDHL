@@ -97,7 +97,7 @@ myPCA <- myPCA + theme(panel.background=element_rect(fill='transparent',color='t
 myPCA <- myPCA + scale_y_continuous(expand=c(0,0),limits=c(-14,14),breaks = seq(-20,20,5)) +
                  scale_x_continuous(expand=c(0,0),limits=c(-14,14),breaks = seq(-20,20,5))
 figure_1<-rbind(ggplotGrob(myPCA ),size="first")
-ggsave(file="./figs/Fig5b_PCA.pdf", plot=figure_1,bg = 'white', width = 14, height = 10, units = 'cm', dpi = 600)
+ggsave(file="./figs/Fig7d_PCA.pdf", plot=figure_1,bg = 'white', width = 14, height = 10, units = 'cm', dpi = 600)
 ########
 
 
@@ -170,7 +170,7 @@ mat <- expMatrix_new[which(rownames(expMatrix_new) %in%  maker$Target),which(col
 anno_col <- as.data.frame(opp[, c("Group")])
 colnames(anno_col) <- c("Group")
 
-pdf(file = paste0("./figs/ExtFig15g_DrugTarget_heatmap.pdf"),width=4.2,height=5)
+pdf(file = paste0("./figs/ExtFig10h_DrugTarget_heatmap.pdf"),width=4.2,height=5)
 pheatmap(mat,cutree_rows=2,cluster_cols =F ,cluster_rows = T,#gaps_col=c(10),
          color = colorRampPalette(c('#29419E','#698DC9',"grey95",'#F67172','#DC2B18'))(50),
          annotation_col = anno_col,annotation_names_col=T,show_rownames = T,annotation_legend = T,
@@ -223,7 +223,7 @@ mySub2 <- mySub2 + theme(panel.background=element_rect(fill='transparent',color=
                          legend.margin=margin(t=0.1,r=0.1,b=0,l=0.1,unit='cm'),legend.text=element_text(size=12),axis.text.y=element_text(size=10,face='plain',color='black'),
                          axis.text.x=element_text(size=10,face='plain',color='black'),axis.title.x=element_text(size=12,face='plain',color='black'),axis.title.y=element_text(size=12,hjust=0.5,vjust=2,face='plain',color='black'))
 figure_4<-rbind(ggplotGrob(mySub2),size="last")
-ggsave(file="./figs/Fig5c_volcano_OE_vs_WT_OPP.pdf", plot=figure_4,bg = 'white', width = 12, height = 8, units = 'cm', dpi = 600)
+ggsave(file="./figs/Fig7b_volcano_OE_vs_WT_OPP.pdf", plot=figure_4,bg = 'white', width = 12, height = 8, units = 'cm', dpi = 600)
 
 a <- data.frame( c( nrow(plotTable_sig2), nrow(plotTable_TSG[which(!(plotTable_TSG$geneName %in% plotTable_down$geneName)),]) ),
                  c( nrow(plotTable_down[which(!(plotTable_down$geneName %in% plotTable_TSG$geneName)),]), nrow(plotTable[which(!(plotTable$geneName %in% plotTable_down$geneName | plotTable$geneName %in% plotTable_TSG$geneName)),])  ))
@@ -275,7 +275,7 @@ mySub2 <- mySub2 + theme(panel.background=element_rect(fill='transparent',color=
                          legend.margin=margin(t=0.1,r=0.1,b=0,l=0.1,unit='cm'),legend.text=element_text(size=12),axis.text.y=element_text(size=10,face='plain',color='black'),
                          axis.text.x=element_text(size=10,face='plain',color='black'),axis.title.x=element_text(size=12,face='plain',color='black'),axis.title.y=element_text(size=12,hjust=0.5,vjust=2,face='plain',color='black'))
 figure_4<-rbind(ggplotGrob(mySub2),size="last")
-ggsave(file="./figs/Fig5d_volcano_nascent_Repair_WT_up.pdf", plot=figure_4,bg = 'white', width = 12, height = 8, units = 'cm', dpi = 600)
+ggsave(file="./figs/Fig7c_volcano_Repair_vs_WT_OPP.pdf", plot=figure_4,bg = 'white', width = 12, height = 8, units = 'cm', dpi = 600)
 
 a <- data.frame( c( nrow(plotTable_sig2), nrow(plotTable_TSG[which(!(plotTable_TSG$geneName %in% plotTable_down$geneName)),]) ),
                  c( nrow(plotTable_down[which(!(plotTable_down$geneName %in% plotTable_TSG$geneName)),]), nrow(plotTable[which(!(plotTable$geneName %in% plotTable_down$geneName | plotTable$geneName %in% plotTable_TSG$geneName)),])  ))

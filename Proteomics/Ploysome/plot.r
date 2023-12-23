@@ -50,7 +50,7 @@ mySub2 <- mySub2 + theme(panel.background=element_rect(fill='transparent',color=
                          axis.text.y=element_text(size=10,face='plain',color='black'),axis.text.x=element_text(size=10,face='plain',color='black'),
                          axis.title.x=element_text(size=12,face='plain',color='black'),axis.title.y=element_text(size=12,hjust=0.5,vjust=2,face='plain',color='black'))
 figure_4<-rbind(ggplotGrob(mySub2),size="last")
-ggsave(file="./Fig5f_WT_ploysome.pdf", plot=figure_4,bg = 'white', width = 12, height = 9, units = 'cm', dpi = 600)
+ggsave(file="./Fig7f_WT_ploysome.pdf", plot=figure_4,bg = 'white', width = 12, height = 9, units = 'cm', dpi = 600)
 
 
 #raw data preprocessing
@@ -69,5 +69,5 @@ mySub2 <- mySub2 + theme(panel.background=element_rect(fill='transparent',color=
                          axis.text.y=element_text(size=10,face='plain',color='black'),axis.text.x=element_text(size=10,face='plain',color='black'),
                          axis.title.x=element_text(size=12,face='plain',color='black'),axis.title.y=element_text(size=12,hjust=0.5,vjust=2,face='plain',color='black'))
 figure_4<-rbind(ggplotGrob(mySub2),size="last")
-ggsave(file="./Fig5f_HDR_ploysome.pdf", plot=figure_4,bg = 'white', width = 12, height = 9, units = 'cm', dpi = 600)
+ggsave(file="./Fig7f_HDR_ploysome.pdf", plot=figure_4,bg = 'white', width = 12, height = 9, units = 'cm', dpi = 600)
 

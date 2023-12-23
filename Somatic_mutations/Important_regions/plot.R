@@ -38,13 +38,13 @@ NAN_plot <-NAN_plot + theme(panel.background=element_rect(fill='transparent',col
                            axis.title.x=element_text(size=14,face='plain',color='black'),axis.title.y=element_text(size=14,face='plain',color='black'))
 NAN_plot <- NAN_plot + scale_x_continuous(expand=c(0,0),limits=c(0.9,max(tableA1$Rank1+3000)),breaks = c(1,10,100,1000,10000),trans="log2") 
 NAN_plot <- NAN_plot + scale_y_continuous(expand=c(0,0),limits=c(-0.01,0.65))
-NAN_plot<- NAN_plot +ylab("Percentage of mutations loaded") +xlab("Rank of peaks (Top 1000 mutated)")
+NAN_plot<- NAN_plot +ylab("Percentage of mutations loaded") +xlab("Rank of peaks")
 NAN_plot <- NAN_plot + scale_fill_manual(name=NULL,values =  c(gg_color_hue(6)[1],gg_color_hue(6)[3]))
 NAN_plot <- NAN_plot + scale_color_manual(name=NULL,values =  c(gg_color_hue(6)[1],gg_color_hue(6)[3]))
 NAN_plot1 <- NAN_plot
 
 figure<-rbind(ggplotGrob(NAN_plot),size="last")
-ggsave(file="ExtFig5a_H3K27ac.pdf", plot=figure,bg = 'white', width =15, height = 8, units = 'cm', dpi = 600)
+ggsave(file="Fig5a_H3K27ac.pdf", plot=figure,bg = 'white', width =15, height = 8, units = 'cm', dpi = 600)
 the1$p.value
 
 tableA <- read.table('H3K4me3/results.txt',header=F)
@@ -66,13 +66,13 @@ NAN_plot <-NAN_plot + theme(panel.background=element_rect(fill='transparent',col
                             axis.title.x=element_text(size=14,face='plain',color='black'),axis.title.y=element_text(size=14,face='plain',color='black'))
 NAN_plot <- NAN_plot + scale_x_continuous(expand=c(0,0),limits=c(0.9,max(tableA1$Rank1+3000)),breaks = c(1,10,100,1000,10000),trans="log2") 
 NAN_plot <- NAN_plot + scale_y_continuous(expand=c(0,0),limits=c(-0.01,0.65))
-NAN_plot<- NAN_plot +ylab("Percentage of mutations loaded") +xlab("Rank of peaks (Top 1000 mutated)")
+NAN_plot<- NAN_plot +ylab("Percentage of mutations loaded") +xlab("Rank of peaks")
 NAN_plot <- NAN_plot + scale_fill_manual(name=NULL,values =  c(gg_color_hue(6)[1],gg_color_hue(6)[3]))
 NAN_plot <- NAN_plot + scale_color_manual(name=NULL,values =  c(gg_color_hue(6)[1],gg_color_hue(6)[3]))
 NAN_plot2 <- NAN_plot
 
 figure<-rbind(ggplotGrob(NAN_plot),size="last")
-ggsave(file="ExtFig5a_H3K4me3.pdf", plot=figure,bg = 'white', width =15, height = 8, units = 'cm', dpi = 600)
+ggsave(file="Fig5a_H3K4me3.pdf", plot=figure,bg = 'white', width =15, height = 8, units = 'cm', dpi = 600)
 the2$p.value
 
 tableA <- read.table('H3K4me1/results.txt',header=F)
@@ -93,7 +93,7 @@ NAN_plot <-NAN_plot + theme(panel.background=element_rect(fill='transparent',col
                             axis.text.x=element_text(size=12,face='bold',color='black'),axis.text.y=element_text(size=12,face='bold',color='black'),
                             axis.title.x=element_text(size=14,face='plain',color='black'),axis.title.y=element_text(size=14,face='plain',color='black'))
 NAN_plot <- NAN_plot + scale_x_continuous(expand=c(0,0),limits=c(0.9,max(tableA1$Rank1+3000)),breaks = c(1,10,100,1000,10000),trans="log2") 
-NAN_plot<- NAN_plot +ylab("Percentage of mutations loaded") +xlab("Rank of peaks (Top 1000 mutated)")
+NAN_plot<- NAN_plot +ylab("Percentage of mutations loaded") +xlab("Rank of peaks")
 NAN_plot <- NAN_plot + scale_fill_manual(name=NULL,values =  c(gg_color_hue(6)[1],gg_color_hue(6)[3]))
 NAN_plot <- NAN_plot + scale_color_manual(name=NULL,values =  c(gg_color_hue(6)[1],gg_color_hue(6)[3]))
 NAN_plot3 <- NAN_plot

@@ -39,7 +39,7 @@ revp_plot<-revp_plot+ggtitle(NULL)+xlab(NULL)+ylab("Fraction of somatic mutation
 revp_plot<-revp_plot+scale_fill_manual(name=NULL,values=c(BBB='#b2df8a',CCC='#cab2d6',AAA='#fdbf6f'),labels=c(BBB="5' UTR",CCC='Coding',AAA="3' UTR"),guide=guide_legend(override.aes=list(size=0.5),nrow=2),na.translate = F)
 revp_plot
 figure_2<-rbind(ggplotGrob(revp_plot),size="first")
-ggsave(file="ExtFig2a_UTRs.pdf", plot=figure_2,bg = 'white', width = 8, height = 13, units = 'cm', dpi = 600)
+ggsave(file="Fig2a_UTRs.pdf", plot=figure_2,bg = 'white', width = 8, height = 13, units = 'cm', dpi = 600)
 
 
 a <- data.frame(table$Num[1:3],table$Num[4:6])

@@ -9,7 +9,7 @@ print( getwd() )
 library(ggplot2)
 library(plyr)
 library("ggpubr")
-
+library(ggbeeswarm)
 
 gg_color_hue <- function(n) {
   hues = seq(15, 375, length = n + 1)
@@ -39,7 +39,7 @@ F1a.plot<-F1a.plot+scale_y_continuous(expand=c(0,0),limits=c(0,1.5))+scale_x_con
 F1a.plot<-F1a.plot + scale_color_manual(name=NULL,values=c("#88419d","#06d6a0","#ef476f","#118ab2","#fc8d62"))
 F1a.plot
 figure_1<-rbind(ggplotGrob(F1a.plot),size="first")
-ggsave(file="Fig5b_distri_SCC.pdf", plot=figure_1,bg = 'white', width = 15, height = 9, units = 'cm', dpi = 600)
+ggsave(file="Fig6b_distri_SCC.pdf", plot=figure_1,bg = 'white', width = 15, height = 9, units = 'cm', dpi = 600)
 the2 <- compare_means(SpearmanR ~ genePairs.direction, data = gene.table)
 the2
 
@@ -64,7 +64,7 @@ F1a.plot<-F1a.plot+scale_y_continuous(expand=c(0,0),limits=c(-1,1.2))
 F1a.plot<-F1a.plot + scale_fill_manual(name=NULL,values=c("#f4a582","#92c5de"),guide = F)
 
 plotxxx<-cbind(ggplotGrob(F1a.plot),size="first")
-ggsave(file="./ExtFig7d_box_SCC.pdf", plot=plotxxx,bg = 'white', width = 8, height = 12, units = 'cm', dpi = 600)
+ggsave(file="./ExtFig4d_box_SCC.pdf", plot=plotxxx,bg = 'white', width = 8, height = 12, units = 'cm', dpi = 600)
 the
 
 
@@ -78,8 +78,8 @@ resultsAmp <- rankPvalue(test, columnweights = c(8,1,1),
            na.last = "keep", ties.method = "average", 
            calculateQvalue = TRUE, pValueMethod = "rank")
 
-gene.table$pValueLowRank <-  resultsAmp$pValueLowRank
-#write.table(gene.table , file = "rankPvalue.txt",sep = "\t",quote=F,row.names = F)
+gene.table$RankingPvalue <-  resultsAmp$pValueLowRank
+write.table(gene.table , file = "Final_results.txt",sep = "\t",quote=F,row.names = F)
 
 
 

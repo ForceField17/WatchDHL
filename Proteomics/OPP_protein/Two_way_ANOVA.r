@@ -155,7 +155,7 @@ mySub2 <- mySub2 + theme(panel.background=element_rect(fill='transparent',color=
                          legend.margin=margin(t=0.1,r=0.1,b=0,l=0.1,unit='cm'),legend.text=element_text(size=12),axis.text.y=element_text(size=10,face='plain',color='black'),
                          axis.text.x=element_text(size=10,face='plain',color='black'),axis.title.x=element_text(size=10,face='plain',color='black'),axis.title.y=element_text(size=10,hjust=0.5,vjust=2,face='plain',color='black'))
 figure_4<-rbind(ggplotGrob(mySub2),size="last")
-ggsave(file="./figs/Fig5e_TwoWay_ANOVA.pdf", plot=figure_4,bg = 'white', width = 10, height = 7, units = 'cm', dpi = 600)
+ggsave(file="./figs/Fig7e_TwoWay_ANOVA.pdf", plot=figure_4,bg = 'white', width = 10, height = 7, units = 'cm', dpi = 600)
 
 a <- data.frame( c( nrow(plotTable_sig2), nrow(plotTable_TSG[which(!(plotTable_TSG$geneName %in% plotTable_down$geneName)),]) ),
                  c( nrow(plotTable_down[which(!(plotTable_down$geneName %in% plotTable_TSG$geneName)),]), nrow(plotTable[which(!(plotTable$geneName %in% plotTable_down$geneName | plotTable$geneName %in% plotTable_TSG$geneName)),])  ))
@@ -192,8 +192,8 @@ names(ranks) <- final_data$geneName
 geneList <- na.omit(ranks)
 geneList = sort(geneList, decreasing = T)
 str(ranks)
-kegg <- read.gmt("../Nascent_protein/lib/c2.cp.kegg.v2022.1.Hs.symbols.gmt")
-#.Random.seed = 420
+kegg <- read.gmt("./lib/c2.cp.kegg.v2022.1.Hs.symbols.gmt")
+.Random.seed = 420
 gse <- GSEA(geneList=geneList, TERM2GENE= kegg, pvalueCutoff = 0.1, minGSSize = 9,maxGSSize = 400,
             eps = 1e-50, pAdjustMethod = "BH", verbose = FALSE, seed = T, by = "fgsea")
 gse_order<-gse[order(gse$enrichmentScore,decreasing=T)]
@@ -221,7 +221,7 @@ plot2 <- plot2 + geom_bar(data=TheTable, aes(x=reorder(ID,-ADP), y=ADP,fill = ad
         axis.text.x=element_text(size=12,face='plain',color='black'),axis.title.x=element_text(size=14,face='plain',color='black'),axis.title.y=element_blank())
 xxa <- plot2
 figure_2<-rbind(ggplotGrob(plot2),size="last")
-ggsave(file="./figs/ExtFig15a_KEGG_GSEA_summary.pdf", plot=figure_2,bg = 'white', width = 16, height = 12, units = 'cm', dpi = 600)
+ggsave(file="./figs/ExtFig10a_KEGG_GSEA_summary.pdf", plot=figure_2,bg = 'white', width = 16, height = 12, units = 'cm', dpi = 600)
 
 ###########################################333
 gse$ID

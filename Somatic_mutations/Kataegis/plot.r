@@ -89,7 +89,7 @@ panels <- figure_1$layout$t[grep("panel", figure_1$layout$name)]
 
 figure_1$heights[panels][1] <- unit(1,'null')
 figure_1$heights[panels][2] <- unit(1,'null')
-ggsave(file=paste0("./Fig2a_merge.",i,".SE.pdf"), plot=figure_1,bg = 'white', width = 27, height =  9, units = 'cm', dpi = 600)
+ggsave(file=paste0("./Fig4a_merge.",i,".SE.pdf"), plot=figure_1,bg = 'white', width = 27, height =  9, units = 'cm', dpi = 600)
 
 
 
@@ -164,7 +164,7 @@ panels <- figure_1$layout$t[grep("panel", figure_1$layout$name)]
 
 figure_1$heights[panels][1] <- unit(1,'null')
 figure_1$heights[panels][2] <- unit(1,'null')
-ggsave(file=paste0("./Fig2c_merge.chr16.",i,".SE.pdf"), plot=figure_1,bg = 'white', width = 27, height =  7, units = 'cm', dpi = 600)
+ggsave(file=paste0("./merge.chr16.",i,".SE.pdf"), plot=figure_1,bg = 'white', width = 27, height =  7, units = 'cm', dpi = 600)
 
 
 
@@ -248,5 +248,5 @@ panels <- figure_1$layout$t[grep("panel", figure_1$layout$name)]
 
 figure_1$heights[panels][1] <- unit(1,'null')
 figure_1$heights[panels][2] <- unit(1,'null')
-ggsave(file=paste0("./ExtFig3b_merge.chr2.",i,".SE.pdf"), plot=figure_1,bg = 'white', width = 27, height =  7, units = 'cm', dpi = 600)
+ggsave(file=paste0("./ExtFig2b_merge.chr2.",i,".SE.pdf"), plot=figure_1,bg = 'white', width = 27, height =  7, units = 'cm', dpi = 600)
 

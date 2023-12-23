@@ -39,7 +39,7 @@ revp_plot<-revp_plot+ggtitle(NULL)+xlab(NULL)+ylab("Fraction of all somatic muta
 revp_plot<-revp_plot+scale_fill_manual(name=NULL,values=c(BBB='#fb9a99',AAA='#9ebcda',DDD='#b2df8a',EEE='#cab2d6',CCC='#fdbf6f'),labels=c(CCC="3' UTR",BBB='Intronic',AAA='Intergenic',EEE='Coding',DDD="5' UTR"),guide=guide_legend(override.aes=list(size=0.5),nrow=2),na.translate = F)
 revp_plot
 figure_2<-rbind(ggplotGrob(revp_plot),size="first")
-ggsave(file="ExtFig2a_All_composition.pdf", plot=figure_2,bg = 'white', width = 8, height = 14, units = 'cm', dpi = 600)
+ggsave(file="Fig2a_All_composition.pdf", plot=figure_2,bg = 'white', width = 8, height = 14, units = 'cm', dpi = 600)
 
 
 a <- data.frame(table$Num[1:4],table$Num[5:8])

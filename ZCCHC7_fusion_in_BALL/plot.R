@@ -84,7 +84,7 @@ NAN_plot <- NAN_plot +stat_pvalue_manual(
 
 figure_2<-rbind(ggplotGrob(NAN_plot),size="last")
 
-ggsave(file="ExtFig18b_ZCCHC7_Label.pdf", plot=figure_2,bg = 'white', width =16, height = 12, units = 'cm', dpi = 600)
+ggsave(file="ExtFig7e_ZCCHC7_Label.pdf", plot=figure_2,bg = 'white', width =16, height = 12, units = 'cm', dpi = 600)
 
 
 

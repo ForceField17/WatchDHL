@@ -155,7 +155,7 @@ mySub2 <- mySub2 + theme(panel.background=element_rect(fill='transparent',color=
                          axis.text.y=element_text(size=10,face='plain',color='black'),axis.text.x=element_text(size=10,face='plain',color='black'),
                          axis.title.x=element_text(size=12,face='plain',color='black'),axis.title.y=element_text(size=12,hjust=0.5,vjust=2,face='plain',color='black'))
 figure_4<-rbind(ggplotGrob(mySub2),size="last")
-ggsave(file="./figs/ExtFig15c_Highlighting_nascent_proteins.pdf", plot=figure_4,bg = 'white', width = 12, height = 11, units = 'cm', dpi = 600)
+ggsave(file="./figs/ExtFig10c_Highlighting_nascent_proteins.pdf", plot=figure_4,bg = 'white', width = 12, height = 11, units = 'cm', dpi = 600)
 
 
 

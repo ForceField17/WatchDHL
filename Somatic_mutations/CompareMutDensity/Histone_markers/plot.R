@@ -52,7 +52,7 @@ NAN_plot <- NAN_plot +stat_compare_means(label = "p.format", method = "wilcox.te
 figure_2<-rbind(ggplotGrob(NAN_plot),size="last")
 
 
-ggsave(file="ExtFig16b_FL_compartment_P126789.pdf", plot=figure_2,bg = 'white', width =16, height = 14, units = 'cm', dpi = 600)
+ggsave(file="ExtFig2d_FL_compartment_P126789.pdf", plot=figure_2,bg = 'white', width =16, height = 14, units = 'cm', dpi = 600)
 
 
 
@@ -77,7 +77,7 @@ NAN_plot <- NAN_plot +stat_compare_means(label = "p.format", method = "wilcox.te
 
 figure_2<-rbind(ggplotGrob(NAN_plot),size="last")
 
-ggsave(file="ExtFig16b_DHL_compartment_P126789.pdf", plot=figure_2,bg = 'white', width =16, height = 14, units = 'cm', dpi = 600)
+ggsave(file="ExtFig2d_DHL_compartment_P126789.pdf", plot=figure_2,bg = 'white', width =16, height = 14, units = 'cm', dpi = 600)
 
 theFL
 theDHL

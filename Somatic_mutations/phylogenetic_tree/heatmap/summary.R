@@ -63,7 +63,7 @@ new_table$FILL[which(new_table$value==0)] <- "F"
 
 F0b.plot<-ggplot()+theme_bw()
 F0b.plot<-F0b.plot+geom_tile(data = new_table,aes(x=reorder(ID,order),y=reorder(gene,-as.integer(gene)),fill=as.factor(FILL)),color=NA,alpha=1,width=1.5,height=1,stat='identity')
-F0b.plot<-F0b.plot+scale_fill_manual(name=NULL,values=c(A="#B8DDAE",B="#B2D867",C="#F5C342",D="#53B94C",E="#E77D72",F="transparent",G="#bc80bd"),guide = NULL)
+F0b.plot<-F0b.plot+scale_fill_manual(name=NULL,values=c(A="#B8DDAE",B="#B2D867",C="#F5C342",D="#53B94C",E="#d01c8b",F="transparent",G="#2b8cbe"),guide = NULL)
 F0b.plot<-F0b.plot+theme(panel.background=element_rect(fill='transparent',color='black',size=1),plot.margin=unit(c(1,1,1,1),'lines'),plot.title=element_text(size=14,vjust=0.5,hjust=0.5,face='plain'),
                          text=element_text(size=16,face='bold'),legend.key.width=unit(0.5,'cm'),legend.key.height=unit(0.5,'cm'),legend.position='none',axis.line.x = element_blank(),axis.ticks.x = element_blank(),axis.line.y = element_blank(),
                          legend.direction='horizontal',legend.text=element_text(size=14,face='bold'),axis.text.y=element_text(size=14,vjust=0.5,hjust=1,face='plain',color='black'),legend.title=element_blank(),
@@ -124,7 +124,7 @@ new_table$FILL[which(new_table$value==0)] <- "F"
 
 F0b.plot<-ggplot()+theme_bw()
 F0b.plot<-F0b.plot+geom_tile(data = new_table,aes(x=reorder(ID,order),y=reorder(gene,-as.integer(gene)),fill=as.factor(FILL)),color=NA,alpha=1,width=1.5,height=1,stat='identity')
-F0b.plot<-F0b.plot+scale_fill_manual(name=NULL,values=c(A="#B8DDAE",B="#B2D867",C="#F5C342",D="#53B94C",E="#E77D72",F="transparent",G="#bc80bd"),guide = NULL)
+F0b.plot<-F0b.plot+scale_fill_manual(name=NULL,values=c(A="#B8DDAE",B="#B2D867",C="#F5C342",D="#53B94C",E="#d01c8b",F="transparent",G="#2b8cbe"),guide = NULL)
 F0b.plot<-F0b.plot+theme(panel.background=element_rect(fill='transparent',color='black',size=1),plot.margin=unit(c(1,1,1,1),'lines'),plot.title=element_text(size=14,vjust=0.5,hjust=0.5,face='plain'),
                          text=element_text(size=16,face='bold'),legend.key.width=unit(0.5,'cm'),legend.key.height=unit(0.5,'cm'),legend.position='none',axis.line.x = element_blank(),axis.ticks.x = element_blank(),axis.line.y = element_blank(),
                          legend.direction='horizontal',legend.text=element_text(size=14,face='bold'),axis.text.y=element_text(size=14,vjust=0.5,hjust=1,face='plain',color='black'),legend.title=element_blank(),
@@ -180,7 +180,7 @@ new_table$FILL[which(new_table$value==0)] <- "F"
 
 F0b.plot<-ggplot()+theme_bw()
 F0b.plot<-F0b.plot+geom_tile(data = new_table,aes(x=reorder(ID,order),y=reorder(gene,-as.integer(gene)),fill=as.factor(FILL)),color=NA,alpha=1,width=1.5,height=1,stat='identity')
-F0b.plot<-F0b.plot+scale_fill_manual(name=NULL,values=c(A="#B8DDAE",B="#B2D867",C="#F5C342",D="#53B94C",E="#E77D72",F="transparent",G="#bc80bd"),guide = NULL)
+F0b.plot<-F0b.plot+scale_fill_manual(name=NULL,values=c(A="#B8DDAE",B="#B2D867",C="#F5C342",D="#53B94C",E="#d01c8b",F="transparent",G="#2b8cbe"),guide = NULL)
 F0b.plot<-F0b.plot+theme(panel.background=element_rect(fill='transparent',color='black',size=1),plot.margin=unit(c(1,1,1,1),'lines'),plot.title=element_text(size=14,vjust=0.5,hjust=0.5,face='plain'),
                          text=element_text(size=16,face='bold'),legend.key.width=unit(0.5,'cm'),legend.key.height=unit(0.5,'cm'),legend.position='none',axis.line.x = element_blank(),axis.ticks.x = element_blank(),axis.line.y = element_blank(),
                          legend.direction='horizontal',legend.text=element_text(size=14,face='bold'),axis.text.y=element_text(size=14,vjust=0.5,hjust=1,face='plain',color='black'),legend.title=element_blank(),
@@ -235,7 +235,7 @@ new_table$FILL[which(new_table$value==0)] <- "F"
 
 F0b.plot<-ggplot()+theme_bw()
 F0b.plot<-F0b.plot+geom_tile(data = new_table,aes(x=reorder(ID,order),y=reorder(gene,-as.integer(gene)),fill=as.factor(FILL)),color=NA,alpha=1,width=1.5,height=1,stat='identity')
-F0b.plot<-F0b.plot+scale_fill_manual(name=NULL,values=c(A="#B8DDAE",B="#B2D867",C="#F5C342",D="#53B94C",E="#E77D72",F="transparent",G="#bc80bd"),guide = NULL)
+F0b.plot<-F0b.plot+scale_fill_manual(name=NULL,values=c(A="#B8DDAE",B="#B2D867",C="#F5C342",D="#53B94C",E="#d01c8b",F="transparent",G="#2b8cbe"),guide = NULL)
 F0b.plot<-F0b.plot+theme(panel.background=element_rect(fill='transparent',color='black',size=1),plot.margin=unit(c(1,1,1,1),'lines'),plot.title=element_text(size=14,vjust=0.5,hjust=0.5,face='plain'),
                          text=element_text(size=16,face='bold'),legend.key.width=unit(0.5,'cm'),legend.key.height=unit(0.5,'cm'),legend.position='none',axis.line.x = element_blank(),axis.ticks.x = element_blank(),axis.line.y = element_blank(),
                          legend.direction='horizontal',legend.text=element_text(size=14,face='bold'),axis.text.y=element_text(size=14,vjust=0.5,hjust=1,face='plain',color='black'),legend.title=element_blank(),
@@ -290,7 +290,7 @@ new_table$FILL[which(new_table$value==0)] <- "F"
 
 F0b.plot<-ggplot()+theme_bw()
 F0b.plot<-F0b.plot+geom_tile(data = new_table,aes(x=reorder(ID,order),y=reorder(gene,-as.integer(gene)),fill=as.factor(FILL)),color=NA,alpha=1,width=1.5,height=1,stat='identity')
-F0b.plot<-F0b.plot+scale_fill_manual(name=NULL,values=c(A="#B8DDAE",B="#B2D867",C="#F5C342",D="#53B94C",E="#E77D72",F="transparent",G="#bc80bd"),guide = NULL)
+F0b.plot<-F0b.plot+scale_fill_manual(name=NULL,values=c(A="#B8DDAE",B="#B2D867",C="#F5C342",D="#53B94C",E="#d01c8b",F="transparent",G="#2b8cbe"),guide = NULL)
 F0b.plot<-F0b.plot+theme(panel.background=element_rect(fill='transparent',color='black',size=1),plot.margin=unit(c(1,1,1,1),'lines'),plot.title=element_text(size=14,vjust=0.5,hjust=0.5,face='plain'),
                          text=element_text(size=16,face='bold'),legend.key.width=unit(0.5,'cm'),legend.key.height=unit(0.5,'cm'),legend.position='none',axis.line.x = element_blank(),axis.ticks.x = element_blank(),axis.line.y = element_blank(),
                          legend.direction='horizontal',legend.text=element_text(size=14,face='bold'),axis.text.y=element_text(size=14,vjust=0.5,hjust=1,face='plain',color='black'),legend.title=element_blank(),
@@ -345,7 +345,7 @@ new_table$FILL[which(new_table$value==0)] <- "F"
 
 F0b.plot<-ggplot()+theme_bw()
 F0b.plot<-F0b.plot+geom_tile(data = new_table,aes(x=reorder(ID,order),y=reorder(gene,-as.integer(gene)),fill=as.factor(FILL)),color=NA,alpha=1,width=1.5,height=1,stat='identity')
-F0b.plot<-F0b.plot+scale_fill_manual(name=NULL,values=c(A="#B8DDAE",B="#B2D867",C="#F5C342",D="#53B94C",E="#E77D72",F="transparent",G="#bc80bd"),guide = NULL)
+F0b.plot<-F0b.plot+scale_fill_manual(name=NULL,values=c(A="#B8DDAE",B="#B2D867",C="#F5C342",D="#53B94C",E="#d01c8b",F="transparent",G="#2b8cbe"),guide = NULL)
 F0b.plot<-F0b.plot+theme(panel.background=element_rect(fill='transparent',color='black',size=1),plot.margin=unit(c(1,1,1,1),'lines'),plot.title=element_text(size=14,vjust=0.5,hjust=0.5,face='plain'),
                          text=element_text(size=16,face='bold'),legend.key.width=unit(0.5,'cm'),legend.key.height=unit(0.5,'cm'),legend.position='none',axis.ticks.x = element_blank(),
                          legend.direction='horizontal',legend.text=element_text(size=14,face='bold'),axis.text.y=element_text(size=14,vjust=0.5,hjust=1,face='plain',color='black'),legend.title=element_blank(),
@@ -376,6 +376,6 @@ figure_1$heights[panels][5] <- unit(4/5,'null')
 figure_1$heights[panels][6] <- unit(3/5,'null')
 
 #grid.draw(figure_1)
-ggsave(file="ExtFig17_Mutation_number_heatmap_all.pdf", plot=figure_1,bg = 'white', width = 18, height = 20, units = 'cm', dpi = 600)
+ggsave(file="SupFig4_Mutation_number_heatmap_all.pdf", plot=figure_1,bg = 'white', width = 18, height = 20, units = 'cm', dpi = 600)
 
 

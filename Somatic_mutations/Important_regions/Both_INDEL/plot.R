@@ -46,6 +46,6 @@ NAN_plot1 <- NAN_plot
 
 figure_2<-rbind(ggplotGrob(NAN_plot1),size="last")
 
-ggsave(file="ExtFig6b_figure_num.pdf", plot=figure_2,bg = 'white', width =16, height = 8, units = 'cm', dpi = 600)
+ggsave(file="ExtFig3b_figure_num.pdf", plot=figure_2,bg = 'white', width =16, height = 8, units = 'cm', dpi = 600)
 the1$p.value
 
